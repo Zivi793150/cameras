@@ -1,15 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.webp" type="image/webp" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <title>Электроинструменты ТАНКЕР — продажа, доставка по Казахстану | Eltok.kz</title>
+    <meta name="description" content="Электроинструменты и сварочные аппараты ТАНКЕР. Продажа оптом и в розницу. Бесплатная доставка по Алматы, доставка по Казахстану. Гарантия 12 месяцев." />
+    <meta name="author" content="Eltok.kz" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6S5DQ9H');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104706911', 'ym');
+
+      ym(104706911, 'init', { ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Open Graph мета-теги -->
+    <meta property="og:title" content="Электроинструменты ТАНКЕР" />
+    <meta property="og:description" content="Официальная продукция ТАНКЕР с гарантией. Продажа и доставка по Казахстану." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eltok.kz" />
+    <meta property="og:image" content="/images/hero/hero-main.jpg" />
+    
+    <!-- Twitter Card мета-теги -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Электроинструменты ТАНКЕР" />
+    <meta name="twitter:description" content="Продажа и доставка по Казахстану. Гарантия 12 месяцев." />
+    <meta name="twitter:image" content="/images/hero/hero-main.jpg" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Preconnect для внешних доменов -->
+    <link rel="preconnect" href="https://electro-1-vjdu.onrender.com" crossorigin>
+    <link rel="dns-prefetch" href="https://electro-1-vjdu.onrender.com">
+    <link rel="preconnect" href="https://nominatim.openstreetmap.org" crossorigin>
+    <link rel="dns-prefetch" href="https://nominatim.openstreetmap.org">
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://maps.googleapis.com">
+    
+    
+    <!-- Preload критических ресурсов -->
+    <link rel="preload" href="/images/hero/hero-main.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="prefetch" href="/logo.webp" as="image" type="image/webp">
+    <link rel="prefetch" href="/images/dotted-world-map-white-background_132079-967.avif" as="image" type="image/avif">
+    
+
+    
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,9 +77,202 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    
+    <!-- Preload шрифтов -->
+    <link rel="preload" href="/fonts/Bounded-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/hemico.ttf" as="font" type="font/ttf" crossorigin>
+    
+    <!-- Локальный шрифт Bounded предзагружен выше; удалили внешнюю зависимость -->
+    
+    <style>
+      @font-face {
+        font-family: 'Bounded';
+        src: url('/fonts/Bounded-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      /* По умолчанию сайт в Bounded, кроме отдельных страниц (товар) */
+      html, body { font-family: 'Bounded', Arial, sans-serif; }
+      .header, .top-bar { font-family: 'Bounded', Arial, sans-serif !important; }
+      
+      /* Оптимизации для изображений */
+      img {
+        content-visibility: auto;
+      }
+      
+      /* Оптимизации для фоновых изображений */
+      [style*="background-image"] {
+        content-visibility: auto;
+      }
+      
+      /* Критический CSS для главной страницы */
+      .main-maket-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+        background: #fff;
+      }
+      
+      .main-maket-container {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        gap: 40px;
+      }
+      
+      .main-maket-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .main-maket-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        /* Предотвращаем CLS */
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+      
+      .main-maket-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .main-maket-title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      
+      .main-maket-subtitle {
+        font-size: 24px;
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+      
+      .main-maket-text {
+        font-size: 16px;
+        color: #777;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      
+      .main-maket-btn {
+        background: #e86c0a;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        padding: 16px 40px;
+        cursor: pointer;
+        transition: background 0.2s;
+        align-self: flex-start;
+      }
+      
+      .main-maket-btn:hover {
+        background: #d15a00;
+      }
+      
+      /* Мобильные стили */
+      @media (max-width: 768px) {
+        .main-maket-container {
+          flex-direction: column;
+          gap: 20px;
+        }
+        
+        .main-maket-title {
+          font-size: 32px;
+        }
+        
+        .main-maket-subtitle {
+          font-size: 20px;
+        }
+        
+        .main-maket-image {
+          max-width: 300px;
+        }
+      }
+      
+      /* Критический CSS для предотвращения CLS */
+      .main-maket-section {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .main-maket-left {
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .home { background: #fff; min-height: 100vh; }
+      .main-maket-section { background: #f8f9fa; padding: 24px 0; width: 100vw; min-width: 100vw; margin-left: 50%; transform: translateX(-50%); }
+      .main-maket-container { display: flex; justify-content: center; align-items: flex-start; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+      .main-maket-left { flex: 1 1 50%; display: flex; align-items: flex-end; }
+      .main-maket-image { max-width: 520px; width: 100%; height: auto; object-fit: contain; display: block; }
+      .main-maket-right { flex: 1 1 50%; display: flex; flex-direction: column; align-items: flex-start; }
+      .main-maket-title { font-size: 20px; font-weight: 700; color: #222; margin: 0 0 8px 0; }
+      .main-maket-subtitle { font-size: 16px; color: #1e88e5; margin-bottom: 6px; }
+      .main-maket-text { font-size: 16px; color: #444; margin-bottom: 8px; }
+      .main-maket-advantages { list-style: none; padding: 0; margin: 0 0 15px 0; }
+      .main-maket-adv-item { display: flex; align-items: center; font-size: 16px; color: #222; }
+      .main-maket-arrow { display: flex; align-items: center; margin-right: 4px; color: #FF6B00; }
+      .main-maket-btn { background: #FF6B00; color: #fff; font-size: 16px; border: none; border-radius: 6px; padding: 12px 24px; cursor: pointer; margin: 0 auto; display: block; }
+      
+      /* Медиа-запросы для критического CSS */
+      @media (max-width: 900px) {
+        .main-maket-container { flex-direction: column; align-items: center; }
+        .main-maket-left, .main-maket-right { flex: 1 1 100%; }
+        .main-maket-image { max-width: 100%; }
+      }
+      @media (max-width: 600px) {
+        .main-maket-section { padding: 16px 0; }
+        .main-maket-title { font-size: 18px; }
+        .main-maket-subtitle { font-size: 14px; }
+        .main-maket-text { font-size: 14px; }
+        .main-maket-adv-item { font-size: 14px; }
+      }
+    </style>
+    
+    <script>
+      // Регистрация service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+      
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6S5DQ9H"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Yandex.Metrika (noscript) -->
+    <noscript><div><img src="https://mc.yandex.ru/watch/104706911" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika (noscript) -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

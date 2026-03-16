@@ -1,0 +1,242 @@
+.category-main {
+  padding: 40px 0;
+  background: #f8f9fa;
+  min-height: calc(100vh - 200px);
+}
+
+/* Заголовок категории */
+.category-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.category-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.category-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Изображение категории */
+.category-preview {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.category-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Секция товаров */
+.category-products {
+  margin-bottom: 60px;
+}
+
+.category-products h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+/* Сетка товаров 4x4 */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+/* Удаляем hover-эффекты для карточек товаров в категориях */
+.product-card:hover {
+  box-shadow: none !important;
+  border: 1.5px solid #e3e6ea !important;
+  transform: none !important;
+  background: inherit !important;
+}
+
+.product-image {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: none !important;
+}
+
+.product-card:hover .product-image img {
+  transform: none !important;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.3;
+  /* Предотвращаем выход длинных названий */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.product-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.spec {
+  font-size: 0.85rem;
+  color: #666;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 12px;
+}
+
+.btn-details {
+  background: #ffc107;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.btn-details:hover {
+  background: #e6ac00;
+  transform: translateY(-1px);
+}
+
+/* SEO-описание */
+.seo-description {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.seo-description h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.seo-description p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.seo-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .category-main {
+    padding: 20px 0;
+  }
+  
+  .category-title {
+    font-size: 2rem;
+  }
+  
+  .category-subtitle {
+    font-size: 1rem;
+  }
+  
+  .category-preview {
+    margin-bottom: 30px;
+  }
+  
+  .category-products h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-info {
+    padding: 12px;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+  }
+  
+  .spec {
+    font-size: 0.8rem;
+  }
+  
+  .seo-description {
+    padding: 25px;
+  }
+  
+  .seo-description h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Для планшетов - 3 колонки */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Для больших экранов - 4 колонки */
+@media (min-width: 1025px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} 

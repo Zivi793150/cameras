@@ -1,0 +1,159 @@
+.footer {
+  min-height: 180px;
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  padding: 40px 20px 20px 20px;
+  border-top: 1px solid var(--ui-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--ui-primary);
+  padding-bottom: 8px;
+  color: var(--ui-primary);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-column ul li a {
+  color: var(--ui-text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--ui-primary);
+}
+
+/* Темные SVG иконки в подвале */
+.footer img[src*=".svg"] {
+  filter: none;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ui-border);
+  text-align: center;
+  color: var(--ui-text-muted);
+  font-size: 14px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 900px) {
+  .footer {
+    padding: 32px 16px 16px 16px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  
+  .footer-column h4 {
+    font-size: 17px;
+  }
+  
+  .footer-column ul li {
+    font-size: 13.5px;
+  }
+}
+
+/* Подвинуть подвал вниз на телефонах из-за фиксированных кнопок */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 15px 50px 15px !important; /* Убрали отступ сверху, оставили снизу */
+    margin-top: 20px !important; /* Подвинуть весь footer вниз */
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer-column h4 {
+    font-size: 16px;
+  }
+  
+  .footer-column ul li {
+    font-size: 15px;
+  }
+  
+  .footer-bottom {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 0 12px 45px 12px !important; /* Убрали отступ сверху, оставили снизу */
+    margin-top: 25px !important; /* Подвинуть весь footer вниз */
+  }
+  
+  .footer-grid {
+    gap: 20px;
+  }
+  
+  .footer-column h4 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-column ul li {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0 10px 40px 10px !important; /* Убрали отступ сверху, оставили снизу */
+    margin-top: 30px !important; /* Подвинуть весь footer вниз */
+  }
+  
+  .footer-grid {
+    gap: 16px;
+  }
+  
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    padding-top: 12px;
+    font-size: 14px;
+  }
+} 

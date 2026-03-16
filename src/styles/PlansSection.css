@@ -1,0 +1,244 @@
+.plans {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 44px 0;
+  background: #F3F6FF;
+  position: relative;
+  overflow: hidden;
+}
+
+.plans__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.plans__head {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 26px auto;
+}
+
+.plans__title {
+  margin: 0 0 10px 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--ui-text);
+}
+
+.plans__title span {
+  color: var(--ui-primary);
+}
+
+.plans__subtitle {
+  color: var(--ui-text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.plans__card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.plans__card.is-accent {
+  border: 2px solid rgba(30, 90, 230, 0.55);
+  box-shadow: 0 22px 50px rgba(30, 90, 230, 0.18);
+  transform: translateY(-6px);
+}
+
+.plans__badge {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--ui-primary), #4F46E5);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 26px rgba(30, 90, 230, 0.22);
+  white-space: nowrap;
+}
+
+.plans__card-body {
+  padding: 22px 18px 14px 18px;
+}
+
+.plans__plan-name {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ui-text);
+  text-align: center;
+}
+
+.plans__plan-cameras {
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.64);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.plans__audience {
+  text-align: center;
+  color: rgba(71, 85, 105, 0.92);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 12px auto 10px auto;
+  max-width: 260px;
+  min-height: 36px;
+}
+
+.plans__price {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: center;
+  color: var(--ui-text);
+  margin: 10px 0 10px 0;
+}
+
+.plans__price.is-accent {
+  color: var(--ui-primary);
+}
+
+.plans__price-from {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.plans__price-value {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.plans__price-currency {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.plans__note {
+  display: inline-flex;
+  margin: 0 auto 12px auto;
+  background: rgba(34, 197, 94, 0.10);
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  color: #15803D;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 8px 12px;
+  border-radius: 999px;
+  line-height: 1;
+  justify-content: center;
+  width: fit-content;
+}
+
+.plans__list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.plans__item {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(71, 85, 105, 0.98);
+  padding-left: 18px;
+  position: relative;
+}
+
+.plans__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: rgba(30, 90, 230, 0.85);
+}
+
+.plans__card-foot {
+  padding: 16px 18px 18px 18px;
+  margin-top: auto;
+}
+
+.plans__btn {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  min-height: 46px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  background: #0F172A;
+  color: #fff;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plans__btn:hover {
+  transform: translateY(-1px);
+  background: #111C33;
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.16);
+}
+
+.plans__btn.is-accent {
+  background: var(--ui-primary);
+  box-shadow: 0 16px 30px rgba(30, 90, 230, 0.25);
+}
+
+.plans__btn.is-accent:hover {
+  background: var(--ui-primary-hover);
+}
+
+@media (max-width: 1000px) {
+  .plans__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plans__card.is-accent {
+    transform: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .plans {
+    padding: 34px 0;
+  }
+
+  .plans__title {
+    font-size: 26px;
+  }
+
+  .plans__price-value {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,157 @@
+/* Глобальные стили для админки */
+/* Используем Google Fonts Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,600;1,600&display=swap');
+.admin-container *,
+.admin-container {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+}
+
+/* Стили для body в админке */
+.admin-container body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f7fa;
+}
+
+/* Стили для заголовков в админке */
+.admin-container h1, 
+.admin-container h2, 
+.admin-container h3, 
+.admin-container h4, 
+.admin-container h5, 
+.admin-container h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  color: #1a2236;
+}
+
+/* Стили для кнопок в админке */
+.admin-container button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+/* Стили для форм в админке */
+.admin-container input, 
+.admin-container textarea, 
+.admin-container select {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+/* Стили для таблиц в админке */
+.admin-container table {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* Стили для ссылок в админке */
+.admin-container a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+
+/* Стили для лейблов в админке */
+.admin-container label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+/* Стили для параграфов в админке */
+.admin-container p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Стили для списков в админке */
+.admin-container ul, 
+.admin-container ol {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* Стили для span элементов в админке */
+.admin-container span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* Стили для div элементов в админке */
+.admin-container div {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* Специальные стили для админки */
+.admin-container {
+  font-family: 'Lato', sans-serif;
+}
+
+.admin-header {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+/* Единая панель навигации в админке */
+.admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-nav .nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-nav .nav-products { background: #6c757d; }
+.admin-nav .nav-variations { background: #9c27b0; }
+.admin-nav .nav-settings { background: #1e88e5; }
+.admin-nav .nav-analytics { background: #4caf50; }
+.admin-nav .nav-pickup { background: #28a745; }
+.admin-nav .nav-logout { background: #e53935; }
+
+@media (max-width: 768px) {
+  .admin-nav { gap: 8px; }
+  .admin-nav .nav-btn { height: 34px; padding: 0 12px; }
+}
+
+.admin-form {
+  font-family: 'Lato', sans-serif;
+}
+
+.admin-table {
+  font-family: 'Lato', sans-serif;
+}
+
+.admin-button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.admin-input {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.admin-label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+} 

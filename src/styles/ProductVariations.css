@@ -1,0 +1,229 @@
+.product-variations {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.product-variations h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-variations .parameter-group {
+  margin-bottom: 15px;
+}
+
+/* Уменьшаем отступ у последней группы параметров (регулятор) */
+.product-variations .parameter-group:last-of-type {
+  margin-bottom: 8px;
+}
+
+.product-variations label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.product-variations .required {
+  color: #e74c3c;
+}
+
+.product-variations select {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: transparent;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.product-variations select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.product-variations .radio-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.product-variations .radio-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-variations .radio-option input[type="radio"] {
+  margin-right: 6px;
+}
+
+.product-variations .checkbox-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-variations .checkbox-option input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.product-variations .selected-variant {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e8f5e8;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.product-variations .selected-variant strong {
+  color: #2e7d32;
+}
+
+.product-variations .price-update {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #856404;
+}
+
+.product-variations .error-message {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #721c24;
+}
+
+/* Анимации */
+.product-variations .parameter-group {
+  transition: all 0.3s ease;
+}
+
+.product-variations .selected-variant {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .product-variations {
+    padding: 12px;
+  }
+  
+  .product-variations .radio-group {
+    gap: 10px;
+  }
+  
+  .product-variations select {
+    font-size: 16px; /* Предотвращает зум на iOS */
+  }
+}
+
+/* Стили для навигации в админке */
+.header-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.products-btn {
+  background: #6c757d;
+}
+
+.products-btn:hover {
+  background: #5a6268;
+}
+
+.settings-btn {
+  background: #1e88e5;
+}
+
+.settings-btn:hover {
+  background: #1976d2;
+}
+
+.analytics-btn {
+  background: #4caf50;
+}
+
+.analytics-btn:hover {
+  background: #45a049;
+}
+
+.pickup-btn {
+  background: #28a745;
+}
+
+.pickup-btn:hover {
+  background: #218838;
+}
+
+/* Адаптивность для навигации */
+@media (max-width: 768px) {
+  .header-actions {
+    align-items: stretch;
+  }
+  
+  .navigation-buttons {
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}

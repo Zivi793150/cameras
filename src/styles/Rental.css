@@ -1,0 +1,122 @@
+/* Rental Page Styles */
+.rental-page .product-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 320px !important;
+}
+
+.rental-page .product-image {
+  height: 160px !important;
+  min-height: 160px !important;
+  max-height: 160px !important;
+  flex: 0 0 160px !important;
+  background: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.rental-page .product-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  max-height: 160px !important;
+}
+
+.rental-page .product-info {
+  padding: 8px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  justify-content: flex-start !important;
+  min-height: 80px !important;
+}
+
+.rental-page .product-name {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #222 !important;
+  margin: 0 0 8px 0 !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+  line-height: 1.2 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  text-overflow: ellipsis !important;
+}
+
+.rental-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 12px 12px;
+  border-top: 1px solid #e3e6ea;
+  gap: 12px;
+}
+
+.rental-footer .product-price {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #ffc107 !important;
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+
+.rental-divider {
+  width: 1px;
+  height: 28px;
+  background: #bdbdbd;
+  flex-shrink: 0;
+}
+
+.rental-btn {
+  background: #FF6B00;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.rental-btn:hover {
+  background: #e65c00;
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  .rental-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .rental-divider {
+    display: none;
+  }
+
+  .rental-footer .product-price {
+    text-align: center;
+  }
+
+  .rental-btn {
+    width: 100%;
+  }
+}
+
+/* Отступ между контентом аренды и футером */
+.rental-page .catalog-main {
+  padding-bottom: 40px;
+}

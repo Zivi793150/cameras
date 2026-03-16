@@ -1,0 +1,166 @@
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start; /* выравниваем по верху */
+}
+
+.checkout-products {
+  /* Левая колонка с продуктами */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  gap: 16px;
+}
+
+.checkout-form {
+  /* Правая колонка с формой */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.checkout-product-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 2px 12px rgba(30,40,90,0.06);
+  margin-bottom: 16px;
+}
+
+.checkout-form-container {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(30,40,90,0.06);
+}
+
+/* Кнопка оформления всегда прижата к низу правой колонки */
+.checkout-form form .submit-button {
+  margin-top: auto;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.delivery-methods {
+  display: flex;
+  gap: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #222;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.total-section {
+  border-top: 1.5px solid #bdbdbd;
+  margin: 24px 0 18px 0;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submit-button {
+  width: 100%;
+  background: #FF6B00;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 0;
+  cursor: pointer;
+  margin-top: 10px;
+  letter-spacing: 0.5;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background: #e55a00;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+  
+  .checkout-products,
+  .checkout-form {
+    min-height: auto; /* на мобильных высоты под контент */
+    gap: 12px;
+  }
+  
+  .delivery-methods {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .checkout-form-container {
+    padding: 20px;
+  }
+  
+  .checkout-product-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 0 12px;
+  }
+  
+  .checkout-form-container {
+    padding: 16px;
+  }
+  
+  .checkout-product-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .checkout-product-card img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+} 

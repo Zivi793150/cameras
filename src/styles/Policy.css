@@ -1,0 +1,331 @@
+.policy-main {
+  padding: 40px 0;
+  background: #f8f9fa;
+  min-height: calc(100vh - 200px);
+}
+
+.policy-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Реквизиты компании */
+.company-details {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.company-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.details-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #ffc107;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 150px;
+}
+
+.detail-value {
+  color: #666;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Политика конфиденциальности */
+.privacy-policy {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.privacy-policy h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.policy-content h3 {
+  font-size: 1.3rem;
+  margin: 25px 0 15px 0;
+  color: #333;
+}
+
+.policy-content h3:first-child {
+  margin-top: 0;
+}
+
+.policy-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Условия доставки */
+.delivery-terms {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.delivery-terms h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.delivery-content h3 {
+  font-size: 1.3rem;
+  margin: 25px 0 15px 0;
+  color: #333;
+}
+
+.delivery-content h3:first-child {
+  margin-top: 0;
+}
+
+.delivery-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.delivery-content li {
+  padding: 8px 0;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+
+.delivery-content li::before {
+  content: '•';
+  color: #ffc107;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Способы оплаты */
+.payment-methods {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.payment-methods h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.payment-item {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-top: 4px solid #ffc107;
+  transition: transform 0.3s ease;
+}
+
+.payment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.payment-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.payment-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.payment-item p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Условия возврата */
+.return-policy {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.return-policy h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.return-content h3 {
+  font-size: 1.3rem;
+  margin: 25px 0 15px 0;
+  color: #333;
+}
+
+.return-content h3:first-child {
+  margin-top: 0;
+}
+
+.return-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.return-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.return-content li {
+  padding: 8px 0;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+
+.return-content li::before {
+  content: '❌';
+  position: absolute;
+  left: 0;
+}
+
+/* Контактная информация */
+.contact-info {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.contact-item {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.contact-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-item p {
+  color: #666;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.contact-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .policy-main {
+    padding: 20px 0;
+  }
+  
+  .policy-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .company-details,
+  .privacy-policy,
+  .delivery-terms,
+  .payment-methods,
+  .return-policy,
+  .contact-info {
+    padding: 20px;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .detail-label {
+    min-width: auto;
+  }
+  
+  .detail-value {
+    text-align: left;
+  }
+  
+  .payment-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .policy-content h3,
+  .delivery-content h3,
+  .return-content h3 {
+    font-size: 1.2rem;
+  }
+} 

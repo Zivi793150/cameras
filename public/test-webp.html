@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест WebP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Тест WebP изображений</h1>
+        
+        <div class="image-test">
+            <h3>1. WebP изображение (hero-main.webp)</h3>
+            <img src="/images/hero/hero-main.webp" alt="WebP Test" onload="this.nextElementSibling.innerHTML='✅ WebP загружено успешно'" onerror="this.nextElementSibling.innerHTML='❌ Ошибка загрузки WebP'">
+            <div class="status">Загрузка...</div>
+        </div>
+
+        <div class="image-test">
+            <h3>2. Picture элемент с WebP</h3>
+            <picture>
+                <source srcset="/images/hero/hero-main.webp" type="image/webp">
+                <img src="/images/hero/hero-main.jpg" alt="Picture WebP Test" onload="this.nextElementSibling.innerHTML='✅ Picture элемент работает'" onerror="this.nextElementSibling.innerHTML='❌ Ошибка в Picture элементе'">
+            </picture>
+            <div class="status">Загрузка...</div>
+        </div>
+
+        <div class="image-test">
+            <h3>3. Логотип WebP</h3>
+            <img src="/logo.webp" alt="Logo WebP" onload="this.nextElementSibling.innerHTML='✅ Логотип WebP загружен'" onerror="this.nextElementSibling.innerHTML='❌ Ошибка загрузки логотипа'">
+            <div class="status">Загрузка...</div>
+        </div>
+
+        <div class="image-test">
+            <h3>4. Проверка поддержки WebP</h3>
+            <div id="webp-support"></div>
+        </div>
+
+        <div class="image-test">
+            <h3>5. Информация о браузере</h3>
+            <div id="browser-info"></div>
+        </div>
+    </div>
+
+    <script>
+        // Проверка поддержки WebP
+        function checkWebPSupport() {
+            const webpSupport = document.getElementById('webp-support');
+            const browserInfo = document.getElementById('browser-info');
+            
+            // Проверка через canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = 1;
+            canvas.height = 1;
+            const ctx = canvas.getContext('2d');
+            
+            try {
+                const dataURL = canvas.toDataURL('image/webp');
+                const isSupported = dataURL.indexOf('data:image/webp') === 0;
+                
+                if (isSupported) {
+                    webpSupport.innerHTML = '<div class="status success">✅ Браузер поддерживает WebP</div>';
+                } else {
+                    webpSupport.innerHTML = '<div class="status error">❌ Браузер НЕ поддерживает WebP</div>';
+                }
+            } catch (e) {
+                webpSupport.innerHTML = '<div class="status error">❌ Ошибка проверки WebP: ' + e.message + '</div>';
+            }
+            
+            // Информация о браузере
+            browserInfo.innerHTML = `
+                <div class="status">
+                    <strong>User Agent:</strong> ${navigator.userAgent}<br>
+                    <strong>Платформа:</strong> ${navigator.platform}<br>
+                    <strong>Язык:</strong> ${navigator.language}
+                </div>
+            `;
+        }
+        
+        // Запуск проверки после загрузки страницы
+        window.addEventListener('load', checkWebPSupport);
+    </script>
+</body>
+</html> 

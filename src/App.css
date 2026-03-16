@@ -1,5 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ :root {
+   --ui-primary: #1E5AE6;
+   --ui-primary-hover: #2F6BFF;
+   --ui-accent: #F5B301;
+   --ui-bg: #F8FAFC;
+   --ui-surface: rgba(255, 255, 255, 0.72);
+   --ui-border: rgba(15, 23, 42, 0.10);
+   --ui-text: #0F172A;
+   --ui-text-muted: #475569;
+ }
+
+body {
+  font-family: 'Bounded', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: var(--ui-text);
+  background: var(--ui-bg);
+}
+
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Общие стили для кнопок */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Общие стили для ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Общие стили для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Утилиты */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
   text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 
 .App-logo {

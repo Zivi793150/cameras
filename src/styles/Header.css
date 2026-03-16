@@ -1,0 +1,508 @@
+/* Новые стили для шапки */
+
+:root {
+  /* базовая шкала отступов для шапки */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+/* Основная шапка */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e3e6ea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Bounded', Arial, sans-serif;
+}
+
+.header-united-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 0 20px 0 12px;
+  min-height: 72px;
+  background: #fff;
+  position: relative;
+}
+
+/* Десктопный логотип */
+.desktop-logo {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: visible;
+}
+
+.logo-image {
+  height: 84px;
+  width: auto;
+  object-fit: contain;
+  margin: 0; /* убрали отрицательные отступы для корректной оптики */
+}
+
+.mobile-logo-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin: 0; /* оптика на мобильных */
+}
+
+/* Десктопная навигация */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: 'Bounded', Arial, sans-serif;
+  font-weight: 400;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  padding: 0 0 0 220px;
+}
+
+.desktop-nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.02rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+
+.desktop-nav a:hover {
+  color: #1e88e5;
+}
+
+.nav-sep {
+  width: 1px;
+  height: 20px;
+  background: #e3e6ea;
+}
+
+/* Десктопные контакты */
+.desktop-contacts {
+  display: flex;
+  align-items: center; /* выравнивание по оптической строке */
+  gap: var(--space-lg);
+  margin-left: auto;
+}
+
+.header-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-xxs);
+  line-height: 1.2; /* единая базовая линия */
+}
+
+.desktop-contacts .header-right-col:first-child {
+  align-items: center;
+  text-align: center;
+}
+
+.top-bar-address {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.top-bar-email {
+  color: #1e88e5;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.top-bar-email:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.top-bar-socials {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: 0; /* убрали лишний нижний отступ для ровной оптики */
+}
+
+.top-bar-social {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5f6fa;
+  transition: background 0.2s;
+}
+
+.top-bar-social:hover {
+  background: #e3e6ea;
+}
+
+.top-bar-social img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Кнопка "Позвонить" */
+.call-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--ui-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(30, 90, 230, 0.25);
+}
+
+.call-button:hover {
+  background: var(--ui-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 90, 230, 0.3);
+}
+
+.call-button img {
+  filter: brightness(0) invert(1);
+}
+
+/* Telegram иконка */
+.telegram-icon {
+  background: #0088cc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background 0.2s;
+  color: #fff;
+}
+
+.telegram-icon svg {
+  color: #fff;
+  fill: #fff;
+}
+
+.telegram-icon:hover {
+  background: #0099dd;
+  transform: scale(1.05);
+}
+
+.telegram-icon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.top-bar-phone {
+  color: #1e88e5;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.top-bar-phone:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* Мобильный заголовок */
+.mobile-title {
+  display: none;
+  align-items: center;
+}
+
+.mobile-title-text {
+  display: none;
+}
+
+/* Кнопка бургер-меню */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #333;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #333;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.hamburger.active {
+  background: transparent;
+}
+
+.hamburger.active::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.active::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* Мобильное меню */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-overlay.active .mobile-menu-content {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e3e6ea;
+}
+
+.mobile-menu-header .mobile-title {
+  display: block;
+}
+
+/* Убрали отдельную кнопку закрытия, оставили только гамбургер-меню */
+
+/* Мобильная навигация */
+.mobile-nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.mobile-nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.mobile-nav a:hover {
+  color: #1e88e5;
+  background: #f8f9fa;
+  padding-left: 10px;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+/* Мобильные контакты */
+.mobile-contacts {
+  padding: 20px;
+  border-top: 1px solid #e3e6ea;
+  margin-top: auto;
+}
+
+.mobile-contact-item {
+  margin-bottom: 16px;
+}
+
+.mobile-contact-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.mobile-contact-value {
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-contact-value:hover {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+
+.mobile-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.mobile-social {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5f6fa;
+  transition: background 0.2s;
+}
+
+.mobile-social:hover {
+  background: #e3e6ea;
+}
+
+/* Медиа-запросы */
+@media (max-width: 900px) {
+  .desktop-nav,
+  .desktop-contacts,
+  .desktop-logo,
+  .header-logo {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  
+  .mobile-title {
+    display: block !important;
+  }
+  
+  .header-united-bar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-united-bar {
+    padding: 0 12px;
+    min-height: 56px;
+  }
+  
+  .mobile-menu-content {
+    width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-united-bar {
+    padding: 0 8px;
+    min-height: 52px;
+  }
+  
+  .mobile-menu-content {
+    width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-united-bar {
+    padding: 0 6px;
+    min-height: 48px;
+  }
+  
+  .mobile-menu-content {
+    width: 240px;
+  }
+  
+  .mobile-nav a {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  
+  .mobile-contact-value {
+    font-size: 14px;
+  }
+} 

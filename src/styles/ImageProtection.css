@@ -1,0 +1,86 @@
+/* Защита изображений от скачивания и скриншотов */
+
+/* Запрет выделения и копирования */
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: auto;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* Блокировка контекстного меню на изображениях */
+img {
+  -webkit-touch-callout: none;
+}
+
+/* Защита от скриншотов через CSS (работает в некоторых браузерах) */
+.product-image,
+.catalog-item img,
+.product-photos img,
+.mini-catalog-item img,
+img[src*="products/"],
+img[src*="cloudinary"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+}
+
+/* Добавляем водяной знак через псевдоэлемент */
+.product-image::after,
+.catalog-item img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 100px,
+    rgba(255, 255, 255, 0.02) 100px,
+    rgba(255, 255, 255, 0.02) 200px
+  );
+}
+
+/* Защита контейнеров с изображениями */
+.product-image,
+.catalog-item,
+.product-photos,
+.mini-catalog-item {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Блокировка PrintScreen в некоторых случаях */
+@media print {
+  img {
+    display: none !important;
+  }
+  
+  .product-image,
+  .catalog-item img,
+  .product-photos img {
+    display: none !important;
+  }
+}
+
+/* Дополнительная защита для мобильных устройств */
+@media (max-width: 768px) {
+  img {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+}
