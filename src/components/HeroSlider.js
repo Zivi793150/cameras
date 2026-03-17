@@ -8,7 +8,6 @@ const slides = [
     eyebrow: 'Современные решения',
     title: 'Видеонаблюдение и безопасность',
     subtitle: 'Контроль 24/7 со смартфона. Установка под ключ в Алматы и по Казахстану.',
-    bullets: ['Подбор оборудования', 'Монтаж за 24 часа', 'Гарантия и поддержка'],
     image: '/banner1.png',
     brand: 'Cameras.kz',
     primaryCta: { label: 'Получить расчет', action: 'lead' },
@@ -16,23 +15,10 @@ const slides = [
     background: 'radial-gradient(circle at 20% 10%, rgba(30, 90, 230, 0.18), transparent 45%), radial-gradient(circle at 80% 30%, rgba(245, 179, 1, 0.14), transparent 50%), linear-gradient(90deg, rgba(248, 250, 252, 1) 0%, rgba(240, 244, 255, 1) 40%, rgba(255, 255, 255, 1) 100%)'
   },
   {
-    id: 'business',
-    eyebrow: 'Для бизнеса и ЖК',
-    title: 'Контроль доступа и аналитика',
-    subtitle: 'СКУД, шлагбаумы, распознавание номеров и видеонаблюдение для объектов.',
-    bullets: ['Face ID / карты / отпечаток', 'Учет рабочего времени', 'Умный въезд'],
-    image: '/banner2.png',
-    brand: 'Cameras.kz',
-    primaryCta: { label: 'Подобрать решение', action: 'lead' },
-    secondaryCta: { label: 'Услуги', to: '/services' },
-    background: 'radial-gradient(circle at 25% 15%, rgba(30, 90, 230, 0.16), transparent 46%), radial-gradient(circle at 85% 35%, rgba(14, 165, 233, 0.12), transparent 52%), linear-gradient(90deg, rgba(248, 250, 252, 1) 0%, rgba(240, 249, 255, 1) 45%, rgba(255, 255, 255, 1) 100%)'
-  },
-  {
     id: 'home2',
     eyebrow: 'Для дома',
     title: 'Ваш дом под защитой',
     subtitle: 'Видеодомофоны, сигнализация, камеры в квартиру и коттедж — быстро и аккуратно.',
-    bullets: ['Доступ в смартфоне', 'Уведомления о движении', 'Чистый монтаж'],
     image: '/banner3.png',
     brand: 'Cameras.kz',
     primaryCta: { label: 'Оставить заявку', action: 'lead' },
@@ -44,7 +30,6 @@ const slides = [
     eyebrow: 'Для офиса и магазинов',
     title: 'Камеры, домофония, сигнализация',
     subtitle: 'Настроим доступ сотрудникам и владельцу. Быстрый запуск и поддержка.',
-    bullets: ['Запись в облако/на диск', 'Уведомления и события', 'Сервис и гарантия'],
     image: '/banner4.jpg',
     brand: 'Cameras.kz',
     primaryCta: { label: 'Получить расчет', action: 'lead' },
@@ -56,7 +41,6 @@ const slides = [
     eyebrow: 'Обслуживание',
     title: 'Поддержка после установки',
     subtitle: 'Обновления, настройка удаленного доступа, обслуживание и модернизация систем.',
-    bullets: ['Выезд мастера', 'Удаленная помощь', 'Прозрачные условия'],
     image: '/banner5.jpg',
     brand: 'Cameras.kz',
     primaryCta: { label: 'Оставить заявку', action: 'lead' },
@@ -170,12 +154,6 @@ const HeroSlider = ({ onLeadClick }) => {
               <div className="hero-slider__eyebrow">{s.eyebrow}</div>
               <h1 className="hero-slider__title">{s.title}</h1>
               <div className="hero-slider__subtitle">{s.subtitle}</div>
-
-              <div className="hero-slider__chips" aria-label="Ключевые преимущества">
-                {s.bullets.map((b) => (
-                  <div key={b} className="hero-slider__chip">{b}</div>
-                ))}
-              </div>
 
               <div className="hero-slider__actions">
                 <button type="button" className="ui-btn ui-btn--primary" onClick={onPrimary}>

@@ -9,6 +9,7 @@ import { fetchWithCache } from '../utils/cache';
 import '../styles/Home.css';
 import Seo from '../components/Seo';
 import HeroSlider from '../components/HeroSlider';
+import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import SolutionsSection from '../components/SolutionsSection';
 import PlansSection from '../components/PlansSection';
 
@@ -255,6 +256,7 @@ const Home = () => {
       />
       <Header />
       <HeroSlider onLeadClick={handleOpenModal} />
+      <WhyChooseUsSection />
       <SolutionsSection onLeadClick={handleOpenModal} />
       <PlansSection onLeadClick={handleOpenModal} />
       <section className="mini-catalog-section">
