@@ -12,8 +12,8 @@
 
 /* Основная шапка */
 .header {
-  background: #fff;
-  border-bottom: 1px solid #e3e6ea;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid var(--ui-border);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -27,7 +27,7 @@
   gap: 18px;
   padding: 0 20px 0 12px;
   min-height: 72px;
-  background: #fff;
+  background: transparent;
   position: relative;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .desktop-nav a {
-  color: #222;
+  color: var(--ui-text);
   text-decoration: none;
   font-size: 1.02rem;
   font-weight: 500;
@@ -82,13 +82,13 @@
 }
 
 .desktop-nav a:hover {
-  color: #1e88e5;
+  color: var(--ui-primary);
 }
 
 .nav-sep {
   width: 1px;
   height: 20px;
-  background: #e3e6ea;
+  background: var(--ui-border);
 }
 
 /* Десктопные контакты */
@@ -113,7 +113,7 @@
 }
 
 .top-bar-address {
-  color: #666;
+  color: var(--ui-text-muted);
   font-size: 0.85rem;
   font-weight: 600;
   display: flex;
@@ -124,7 +124,7 @@
 }
 
 .top-bar-email {
-  color: #1e88e5;
+  color: var(--ui-primary);
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
@@ -137,7 +137,7 @@
 }
 
 .top-bar-email:hover {
-  color: #1565c0;
+  color: var(--ui-primary-hover);
   text-decoration: underline;
 }
 
@@ -154,12 +154,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #f5f6fa;
+  background: rgba(255, 255, 255, 0.06);
   transition: background 0.2s;
 }
 
 .top-bar-social:hover {
-  background: #e3e6ea;
+  background: rgba(255, 255, 255, 0.10);
 }
 
 .top-bar-social img {
@@ -181,13 +181,13 @@
   font-size: 14px;
   font-weight: 700;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 12px rgba(30, 90, 230, 0.25);
+  box-shadow: 0 6px 16px rgba(var(--ui-primary-rgb), 0.24);
 }
 
 .call-button:hover {
   background: var(--ui-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(30, 90, 230, 0.3);
+  box-shadow: 0 10px 22px rgba(var(--ui-primary-rgb), 0.30);
 }
 
 .call-button img {
@@ -196,7 +196,8 @@
 
 /* Telegram иконка */
 .telegram-icon {
-  background: #0088cc;
+  background: rgba(var(--ui-primary-rgb), 0.18);
+  border: 1px solid rgba(var(--ui-primary-rgb), 0.26);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -213,7 +214,7 @@
 }
 
 .telegram-icon:hover {
-  background: #0099dd;
+  background: rgba(var(--ui-primary-rgb), 0.24);
   transform: scale(1.05);
 }
 
@@ -224,7 +225,7 @@
 }
 
 .top-bar-phone {
-  color: #1e88e5;
+  color: var(--ui-primary);
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
@@ -237,7 +238,7 @@
 }
 
 .top-bar-phone:hover {
-  color: #1565c0;
+  color: var(--ui-primary-hover);
   text-decoration: underline;
 }
 
@@ -334,7 +335,7 @@
   right: 0;
   width: 300px;
   height: 100%;
-  background: #fff;
+  background: rgba(17, 24, 39, 0.98);
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
@@ -350,7 +351,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #e3e6ea;
+  border-bottom: 1px solid var(--ui-border);
 }
 
 .mobile-menu-header .mobile-title {
@@ -369,19 +370,19 @@
 }
 
 .mobile-nav a {
-  color: #222;
+  color: var(--ui-text);
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   padding: 16px 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease;
   position: relative;
 }
 
 .mobile-nav a:hover {
-  color: #1e88e5;
-  background: #f8f9fa;
+  color: var(--ui-primary);
+  background: rgba(var(--ui-primary-rgb), 0.10);
   padding-left: 10px;
 }
 
@@ -392,7 +393,7 @@
 /* Мобильные контакты */
 .mobile-contacts {
   padding: 20px;
-  border-top: 1px solid #e3e6ea;
+  border-top: 1px solid var(--ui-border);
   margin-top: auto;
 }
 
@@ -402,20 +403,20 @@
 
 .mobile-contact-label {
   font-size: 14px;
-  color: #666;
+  color: var(--ui-text-muted);
   margin-bottom: 4px;
 }
 
 .mobile-contact-value {
   font-size: 16px;
-  color: #222;
+  color: var(--ui-text);
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .mobile-contact-value:hover {
-  color: #1e88e5;
+  color: var(--ui-primary);
   text-decoration: underline;
 }
 
@@ -432,12 +433,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #f5f6fa;
+  background: rgba(255, 255, 255, 0.06);
   transition: background 0.2s;
 }
 
 .mobile-social:hover {
-  background: #e3e6ea;
+  background: rgba(255, 255, 255, 0.10);
 }
 
 /* Медиа-запросы */

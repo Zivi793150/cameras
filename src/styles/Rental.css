@@ -11,7 +11,7 @@
   min-height: 160px !important;
   max-height: 160px !important;
   flex: 0 0 160px !important;
-  background: #fff !important;
+  background: rgba(255, 255, 255, 0.03) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -39,7 +39,7 @@
 .rental-page .product-name {
   font-size: 1rem !important;
   font-weight: 700 !important;
-  color: #222 !important;
+  color: var(--ui-text) !important;
   margin: 0 0 8px 0 !important;
   min-height: 48px !important;
   max-height: 48px !important;
@@ -48,6 +48,7 @@
   line-height: 1.2 !important;
   overflow: hidden !important;
   display: -webkit-box !important;
+  line-clamp: 2 !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
   text-overflow: ellipsis !important;
@@ -58,14 +59,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px 12px 12px;
-  border-top: 1px solid #e3e6ea;
+  border-top: 1px solid var(--ui-border);
   gap: 12px;
 }
 
 .rental-footer .product-price {
   font-size: 1rem !important;
   font-weight: bold !important;
-  color: #ffc107 !important;
+  color: var(--ui-primary) !important;
   margin: 0 !important;
   flex-shrink: 0;
 }
@@ -73,12 +74,12 @@
 .rental-divider {
   width: 1px;
   height: 28px;
-  background: #bdbdbd;
+  background: var(--ui-border);
   flex-shrink: 0;
 }
 
 .rental-btn {
-  background: #FF6B00;
+  background: var(--ui-primary);
   color: #fff;
   border: none;
   padding: 6px 12px;
@@ -92,7 +93,7 @@
 }
 
 .rental-btn:hover {
-  background: #e65c00;
+  background: var(--ui-primary-hover);
 }
 
 /* Mobile styles */

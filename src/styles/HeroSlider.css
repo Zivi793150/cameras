@@ -28,7 +28,7 @@
   border: 1px solid var(--ui-border);
   border-radius: 16px;
   padding: 24px 24px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(12px);
 }
 
@@ -94,29 +94,29 @@
 
 .ui-btn:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(30, 90, 230, 0.25);
+  box-shadow: 0 0 0 3px rgba(var(--ui-primary-rgb), 0.25);
 }
 
 .ui-btn--primary {
   background: var(--ui-primary);
   color: #fff;
-  box-shadow: 0 10px 20px rgba(30, 90, 230, 0.25);
+  box-shadow: 0 10px 22px rgba(var(--ui-primary-rgb), 0.22);
 }
 
 .ui-btn--primary:hover {
   background: var(--ui-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 16px 26px rgba(30, 90, 230, 0.28);
+  box-shadow: 0 16px 34px rgba(var(--ui-primary-rgb), 0.26);
 }
 
 .ui-btn--secondary {
-  background: rgba(255, 255, 255, 0.55);
-  border: 2px solid rgba(30, 90, 230, 0.35);
-  color: var(--ui-primary);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(var(--ui-primary-rgb), 0.38);
+  color: var(--ui-text);
 }
 
 .ui-btn--secondary:hover {
-  background: rgba(30, 90, 230, 0.08);
+  background: rgba(var(--ui-primary-rgb), 0.12);
   transform: translateY(-1px);
 }
 

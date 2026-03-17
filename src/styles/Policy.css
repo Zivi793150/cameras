@@ -1,6 +1,6 @@
 .policy-main {
   padding: 40px 0;
-  background: #f8f9fa;
+  background: var(--ui-bg);
   min-height: calc(100vh - 200px);
 }
 
@@ -8,22 +8,23 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 /* Реквизиты компании */
 .company-details {
-  background: white;
+  background: var(--ui-surface);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
   margin-bottom: 30px;
 }
 
 .company-details h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .details-grid {
@@ -36,42 +37,43 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 15px;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 6px;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid var(--ui-primary);
 }
 
 .detail-label {
   font-weight: 600;
-  color: #333;
+  color: var(--ui-text);
   min-width: 150px;
 }
 
 .detail-value {
-  color: #666;
+  color: var(--ui-text-muted);
   font-weight: 500;
   text-align: right;
 }
 
 /* Политика конфиденциальности */
 .privacy-policy {
-  background: white;
+  background: var(--ui-surface);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
   margin-bottom: 30px;
 }
 
 .privacy-policy h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .policy-content h3 {
   font-size: 1.3rem;
   margin: 25px 0 15px 0;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .policy-content h3:first-child {
@@ -81,29 +83,30 @@
 .policy-content p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--ui-text-muted);
   margin-bottom: 15px;
 }
 
 /* Условия доставки */
 .delivery-terms {
-  background: white;
+  background: var(--ui-surface);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
   margin-bottom: 30px;
 }
 
 .delivery-terms h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .delivery-content h3 {
   font-size: 1.3rem;
   margin: 25px 0 15px 0;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .delivery-content h3:first-child {
@@ -118,14 +121,14 @@
 
 .delivery-content li {
   padding: 8px 0;
-  color: #555;
+  color: var(--ui-text-muted);
   position: relative;
   padding-left: 20px;
 }
 
 .delivery-content li::before {
   content: '•';
-  color: #ffc107;
+  color: var(--ui-primary);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -133,17 +136,18 @@
 
 /* Способы оплаты */
 .payment-methods {
-  background: white;
+  background: var(--ui-surface);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
   margin-bottom: 30px;
 }
 
 .payment-methods h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--ui-text);
   text-align: center;
 }
 
@@ -156,15 +160,15 @@
 .payment-item {
   text-align: center;
   padding: 20px;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
-  border-top: 4px solid #ffc107;
+  border-top: 4px solid var(--ui-primary);
   transition: transform 0.3s ease;
 }
 
 .payment-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
 
 .payment-icon {
@@ -175,33 +179,34 @@
 .payment-item h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .payment-item p {
-  color: #666;
+  color: var(--ui-text-muted);
   font-size: 0.9rem;
 }
 
 /* Условия возврата */
 .return-policy {
-  background: white;
+  background: var(--ui-surface);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
   margin-bottom: 30px;
 }
 
 .return-policy h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .return-content h3 {
   font-size: 1.3rem;
   margin: 25px 0 15px 0;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .return-content h3:first-child {
@@ -211,7 +216,7 @@
 .return-content p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--ui-text-muted);
   margin-bottom: 15px;
 }
 
@@ -223,7 +228,7 @@
 
 .return-content li {
   padding: 8px 0;
-  color: #555;
+  color: var(--ui-text-muted);
   position: relative;
   padding-left: 20px;
 }
@@ -236,16 +241,17 @@
 
 /* Контактная информация */
 .contact-info {
-  background: white;
+  background: var(--ui-surface);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
 
 .contact-info h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--ui-text);
   text-align: center;
 }
 
@@ -258,19 +264,19 @@
 .contact-item {
   text-align: center;
   padding: 20px;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid var(--ui-primary);
 }
 
 .contact-item h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .contact-item p {
-  color: #666;
+  color: var(--ui-text-muted);
   margin-bottom: 5px;
   font-size: 0.95rem;
 }

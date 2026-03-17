@@ -26,25 +26,25 @@
 .checkout-product-card {
   width: 100%;
   box-sizing: border-box;
-  border: 1.5px solid #bdbdbd;
+  border: 1.5px solid var(--ui-border);
   border-radius: 12px;
   padding: 20px;
-  background: #f9f9f9;
+  background: var(--ui-surface);
   display: flex;
   align-items: center;
   gap: 18px;
-  box-shadow: 0 2px 12px rgba(30,40,90,0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   margin-bottom: 16px;
 }
 
 .checkout-form-container {
   width: 100%;
   box-sizing: border-box;
-  background: #fff;
-  border: 1.5px solid #bdbdbd;
+  background: var(--ui-surface);
+  border: 1.5px solid var(--ui-border);
   border-radius: 12px;
   padding: 28px;
-  box-shadow: 0 4px 18px rgba(30,40,90,0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* Кнопка оформления всегда прижата к низу правой колонки */
@@ -69,7 +69,7 @@
 
 .form-group label {
   font-weight: 500;
-  color: #222;
+  color: var(--ui-text);
   display: block;
   margin-bottom: 6px;
 }
@@ -78,10 +78,12 @@
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid var(--ui-border);
   border-radius: 6px;
   font-size: 16px;
   font-family: inherit;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ui-text);
 }
 
 .form-group textarea {
@@ -90,7 +92,7 @@
 }
 
 .total-section {
-  border-top: 1.5px solid #bdbdbd;
+  border-top: 1.5px solid var(--ui-border);
   margin: 24px 0 18px 0;
   padding-top: 18px;
   display: flex;
@@ -100,7 +102,7 @@
 
 .submit-button {
   width: 100%;
-  background: #FF6B00;
+  background: var(--ui-primary);
   color: #fff;
   font-size: 20px;
   font-weight: 600;
@@ -114,7 +116,7 @@
 }
 
 .submit-button:hover {
-  background: #e55a00;
+  background: var(--ui-primary-hover);
 }
 
 /* Адаптивность для мобильных устройств */

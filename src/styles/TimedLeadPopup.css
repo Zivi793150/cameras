@@ -12,7 +12,7 @@
 .lead-popup-content {
   width: 100%;
   max-width: 720px;
-  background: #fff;
+  background: var(--ui-surface);
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -23,13 +23,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--ui-border);
 }
 
 .lead-popup-title {
   font-size: 22px;
   font-weight: 700;
-  color: #222;
+  color: var(--ui-text);
 }
 
 .lead-popup-close {
@@ -39,12 +39,12 @@
   line-height: 1;
   cursor: pointer;
   padding: 0 6px;
-  color: #666;
+  color: var(--ui-text-muted);
 }
 
 .lead-popup-subtitle {
   padding: 14px 20px 4px;
-  color: #555;
+  color: var(--ui-text-muted);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -59,18 +59,20 @@
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #222;
+  color: var(--ui-text);
   margin-bottom: 6px;
 }
 
 .lead-popup-field input,
 .lead-popup-field textarea {
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid var(--ui-border);
   border-radius: 6px;
   padding: 10px 12px;
   font-size: 14px;
   outline: none;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ui-text);
 }
 
 .lead-popup-field input.error,
@@ -86,14 +88,14 @@
 
 .lead-popup-submit {
   width: 100%;
-  background: #ffc107;
+  background: var(--ui-primary);
   border: none;
   border-radius: 8px;
   padding: 14px 16px;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  color: #222;
+  color: #fff;
 }
 
 .lead-popup-submit:disabled {

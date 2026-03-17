@@ -1,28 +1,28 @@
 /* --- Оптимизированные стили для страницы Контакты --- */
-.contacts-main { padding: 24px 0; background: #f8f9fa; min-height: 60vh; }
-.contacts-title { text-align: center; font-size: 2rem; margin-bottom: 24px; color: #222; }
+.contacts-main { padding: 24px 0; background: var(--ui-bg); min-height: 60vh; }
+.contacts-title { text-align: center; font-size: 2rem; margin-bottom: 24px; color: var(--ui-text); }
 .contacts-content { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
 .contacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.contact-card { background: #fff; padding: 8px; }
-.contact-card-header { font-size: 1rem; color: #222; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+.contact-card { background: rgba(255, 255, 255, 0.04); border: 1px solid var(--ui-border); padding: 8px; }
+.contact-card-header { font-size: 1rem; color: var(--ui-text); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
 .contact-card-icon { font-size: 1.2rem; }
-.contact-card-content { color: #555; font-size: 0.98rem; }
-.contact-form { background: #fff; padding: 8px; }
-.contact-form h2 { font-size: 1.1rem; margin-bottom: 6px; color: #222; }
-.contact-form > p { color: #666; margin-bottom: 8px; font-size: 0.98rem; }
-.btn-contact-form { background: #ffc107; color: #222; padding: 8px 0; border: none; font-size: 1rem; width: 100%; margin-bottom: 8px; cursor: pointer; }
-.social-links h3 { font-size: 1rem; margin-bottom: 6px; color: #222; }
+.contact-card-content { color: var(--ui-text-muted); font-size: 0.98rem; }
+.contact-form { background: rgba(255, 255, 255, 0.04); border: 1px solid var(--ui-border); padding: 8px; }
+.contact-form h2 { font-size: 1.1rem; margin-bottom: 6px; color: var(--ui-text); }
+.contact-form > p { color: var(--ui-text-muted); margin-bottom: 8px; font-size: 0.98rem; }
+.btn-contact-form { background: var(--ui-primary); color: #fff; padding: 8px 0; border: none; font-size: 1rem; width: 100%; margin-bottom: 8px; cursor: pointer; }
+.social-links h3 { font-size: 1rem; margin-bottom: 6px; color: var(--ui-text); }
 .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.social-link { display: flex; align-items: center; gap: 6px; padding: 6px; background: #f8f9fa; border: 1px solid #e0e0e0; color: #222; font-size: 0.98rem; cursor: pointer; }
+.social-link { display: flex; align-items: center; gap: 6px; padding: 6px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--ui-border); color: var(--ui-text); font-size: 0.98rem; cursor: pointer; }
 .social-icon { font-size: 1rem; }
-.map-section { background: #fff; padding: 8px; margin-bottom: 12px; }
-.map-section h2 { font-size: 1.1rem; margin-bottom: 6px; color: #222; text-align: center; }
+.map-section { background: rgba(255, 255, 255, 0.04); border: 1px solid var(--ui-border); padding: 8px; margin-bottom: 12px; }
+.map-section h2 { font-size: 1.1rem; margin-bottom: 6px; color: var(--ui-text); text-align: center; }
 .map-container { width: 100%; }
-.additional-info { background: #fff; padding: 8px; }
+.additional-info { background: rgba(255, 255, 255, 0.04); border: 1px solid var(--ui-border); padding: 8px; }
 .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
-.info-item { text-align: center; padding: 8px; background: #f8f9fa; }
-.info-item h3 { font-size: 1rem; margin-bottom: 4px; color: #222; }
-.info-item p { color: #555; font-size: 0.95rem; }
+.info-item { text-align: center; padding: 8px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--ui-border); }
+.info-item h3 { font-size: 1rem; margin-bottom: 4px; color: var(--ui-text); }
+.info-item p { color: var(--ui-text-muted); font-size: 0.95rem; }
 @media (max-width: 900px) {
   .contacts-main {
     padding: 20px 0;

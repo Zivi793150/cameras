@@ -12,7 +12,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: var(--ui-surface);
   padding: 0;
   max-width: 500px;
   width: 90%;
@@ -25,13 +25,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px 0 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--ui-border);
   margin-bottom: 20px;
 }
 
 .modal-header h3 {
   margin: 0;
-  color: #333;
+  color: var(--ui-text);
   font-size: 20px;
 }
 
@@ -40,7 +40,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #666;
+  color: var(--ui-text-muted);
   padding: 0;
   width: 30px;
   height: 30px;
@@ -52,7 +52,7 @@
 }
 
 .modal-close:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .modal-form {
@@ -67,25 +67,27 @@
   display: block;
   margin-bottom: 5px;
   font-weight: 500;
-  color: #333;
+  color: var(--ui-text);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--ui-border);
   border-radius: 4px;
   font-size: 14px;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ui-text);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ffc107;
-  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+  border-color: rgba(var(--ui-primary-rgb), 0.70);
+  box-shadow: 0 0 0 2px rgba(var(--ui-primary-rgb), 0.20);
 }
 
 .form-group input.error,
@@ -107,8 +109,8 @@
 }
 
 .btn-submit {
-  background: #ffc107;
-  color: #333;
+  background: var(--ui-primary);
+  color: #fff;
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
@@ -120,7 +122,7 @@
 }
 
 .btn-submit:hover:not(:disabled) {
-  background: #e6ac00;
+  background: var(--ui-primary-hover);
 }
 
 .btn-submit:active:not(:disabled) {
@@ -128,7 +130,7 @@
 }
 
 .btn-submit:disabled {
-  background: #ccc;
+  background: rgba(255, 255, 255, 0.14);
   cursor: not-allowed;
   opacity: 0.7;
 }

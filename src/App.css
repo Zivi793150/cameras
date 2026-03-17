@@ -5,14 +5,16 @@
 }
 
  :root {
-   --ui-primary: #1E5AE6;
-   --ui-primary-hover: #2F6BFF;
-   --ui-accent: #F5B301;
-   --ui-bg: #F8FAFC;
-   --ui-surface: rgba(255, 255, 255, 0.72);
-   --ui-border: rgba(15, 23, 42, 0.10);
-   --ui-text: #0F172A;
-   --ui-text-muted: #475569;
+   --ui-primary: #FF8A00;
+   --ui-primary-hover: #FF9A24;
+   --ui-primary-rgb: 255, 138, 0;
+   --ui-accent: #3B82F6;
+  --ui-accent-rgb: 59, 130, 246;
+   --ui-bg: #1F2532;
+   --ui-surface: rgba(42, 48, 62, 0.72);
+   --ui-border: rgba(255, 255, 255, 0.16);
+   --ui-text: #F8FAFC;
+   --ui-text-muted: rgba(248, 250, 252, 0.82);
  }
 
 body {

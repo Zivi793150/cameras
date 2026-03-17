@@ -4,7 +4,7 @@
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 44px 0;
-  background: #F3F6FF;
+  background: var(--ui-bg);
   position: relative;
   overflow: hidden;
 }
@@ -49,10 +49,10 @@
 }
 
 .plans__card {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-radius: 18px;
-  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -60,8 +60,8 @@
 }
 
 .plans__card.is-accent {
-  border: 2px solid rgba(30, 90, 230, 0.55);
-  box-shadow: 0 22px 50px rgba(30, 90, 230, 0.18);
+  border: 2px solid rgba(var(--ui-primary-rgb), 0.55);
+  box-shadow: 0 22px 50px rgba(var(--ui-primary-rgb), 0.18);
   transform: translateY(-6px);
 }
 
@@ -70,7 +70,7 @@
   top: 14px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, var(--ui-primary), #4F46E5);
+  background: linear-gradient(90deg, var(--ui-primary), var(--ui-primary-hover));
   color: #fff;
   padding: 8px 12px;
   border-radius: 999px;
@@ -78,7 +78,7 @@
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  box-shadow: 0 12px 26px rgba(30, 90, 230, 0.22);
+  box-shadow: 0 12px 26px rgba(var(--ui-primary-rgb), 0.22);
   white-space: nowrap;
 }
 
@@ -99,14 +99,14 @@
 .plans__plan-cameras {
   font-size: 16px;
   font-weight: 800;
-  color: rgba(15, 23, 42, 0.64);
+  color: var(--ui-text-muted);
   text-align: center;
   margin-top: 6px;
 }
 
 .plans__audience {
   text-align: center;
-  color: rgba(71, 85, 105, 0.92);
+  color: var(--ui-text-muted);
   font-size: 13px;
   line-height: 1.4;
   margin: 12px auto 10px auto;

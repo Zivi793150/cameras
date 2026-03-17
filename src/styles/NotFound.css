@@ -15,7 +15,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   padding: 40px 10px;
 }
 .notfound-404 {
@@ -24,7 +25,7 @@
   font-size: 7rem;
   font-family: 'Bounded', Arial, sans-serif;
   font-weight: 800;
-  color: #ffc107;
+  color: var(--ui-primary);
   letter-spacing: 2px;
   margin-bottom: 18px;
 }
@@ -32,19 +33,19 @@
   font-size: 2.2rem;
   font-family: 'Bounded', Arial, sans-serif;
   font-weight: 700;
-  color: #1a2236;
+  color: var(--ui-text);
   margin-bottom: 12px;
   text-align: center;
 }
 .notfound-text {
   font-size: 1.13rem;
-  color: #4a5568;
+  color: var(--ui-text-muted);
   margin-bottom: 28px;
   text-align: center;
 }
 .notfound-btn {
-  background: #ffc107;
-  color: #222;
+  background: var(--ui-primary);
+  color: #fff;
   padding: 16px 38px;
   border: none;
   border-radius: 10px;
@@ -52,11 +53,11 @@
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 18px rgba(255,193,7,0.13);
+  box-shadow: 0 8px 22px rgba(var(--ui-primary-rgb), 0.22);
   font-family: 'Bounded', Arial, sans-serif;
 }
 .notfound-btn:hover {
-  background: #e6ac00;
+  background: var(--ui-primary-hover);
   color: #fff;
-  box-shadow: 0 8px 32px rgba(255,193,7,0.18);
-} 
+  box-shadow: 0 12px 34px rgba(var(--ui-primary-rgb), 0.26);
+}
