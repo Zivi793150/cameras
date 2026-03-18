@@ -1,0 +1,262 @@
+/* --- Services Page Styles --- */
+.services-main {
+  padding: 24px 0;
+  background: var(--ui-bg);
+  min-height: 60vh;
+}
+
+.services-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: var(--ui-surface);
+  border-radius: 16px;
+  border: 1px solid var(--ui-border);
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--ui-text);
+}
+
+.services-intro {
+  font-size: 1.1rem;
+  color: var(--ui-text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.service-card {
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-header {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--ui-border);
+}
+
+.service-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ui-primary);
+  margin-bottom: 12px;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: var(--ui-text-muted);
+  line-height: 1.6;
+}
+
+.service-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  padding: 20px;
+  background: rgba(var(--ui-accent-rgb), 0.08);
+  border: 1px solid rgba(var(--ui-accent-rgb), 0.15);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.service-item:hover {
+  background: rgba(var(--ui-accent-rgb), 0.12);
+}
+
+.service-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ui-text);
+  margin-bottom: 8px;
+}
+
+.service-item-text {
+  font-size: 0.95rem;
+  color: var(--ui-text-muted);
+  line-height: 1.5;
+}
+
+.services-advantages {
+  margin-bottom: 48px;
+}
+
+.advantages-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--ui-text);
+  margin-bottom: 32px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.advantage-card {
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--ui-primary-rgb), 0.5);
+}
+
+.advantage-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ui-primary);
+  margin-bottom: 12px;
+}
+
+.advantage-text {
+  font-size: 1rem;
+  color: var(--ui-text-muted);
+  line-height: 1.5;
+}
+
+.services-cta {
+  margin-bottom: 32px;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(var(--ui-primary-rgb), 0.15) 0%, rgba(var(--ui-accent-rgb), 0.1) 100%);
+  border: 1px solid rgba(var(--ui-primary-rgb), 0.3);
+  border-radius: 20px;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ui-text);
+  margin-bottom: 12px;
+}
+
+.cta-text {
+  font-size: 1rem;
+  color: var(--ui-text-muted);
+  margin-bottom: 24px;
+}
+
+.btn-cta {
+  background: var(--ui-primary);
+  color: #fff;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(var(--ui-primary-rgb), 0.4);
+}
+
+.btn-cta:hover {
+  background: var(--ui-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--ui-primary-rgb), 0.5);
+}
+
+@media (max-width: 900px) {
+  .services-hero {
+    padding: 32px 20px;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .services-intro {
+    font-size: 1rem;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+
+  .service-name {
+    font-size: 1.3rem;
+  }
+
+  .service-items {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-title {
+    font-size: 1.6rem;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-card {
+    padding: 36px 24px;
+  }
+
+  .cta-title {
+    font-size: 1.3rem;
+  }
+
+  .btn-cta {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-main {
+    padding: 16px 0;
+  }
+
+  .services-title {
+    font-size: 1.6rem;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .advantage-card {
+    padding: 20px;
+  }
+
+  .cta-card {
+    padding: 28px 20px;
+  }
+
+  .btn-cta {
+    width: 100%;
+  }
+}

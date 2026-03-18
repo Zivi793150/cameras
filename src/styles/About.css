@@ -1,21 +1,21 @@
 /* --- Оптимизированные стили для страницы О компании --- */
-/* Принудительное обновление стилей */
-.about-main { padding: 24px 0; background: #f8f9fa; min-height: 60vh; }
-.about-title { text-align: center; font-size: 2rem; margin-bottom: 24px; color: #222; }
-.about-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; background: #fff; padding: 16px; }
-.about-hero-content h2 { font-size: 1.2rem; margin-bottom: 10px; color: #222; }
-.about-subtitle { font-size: 1rem; color: #ffc107; margin-bottom: 10px; }
-.about-hero-content p { font-size: 1rem; color: #555; margin-bottom: 12px; }
+/* Перекраска в темную тему сайта */
+.about-main { padding: 24px 0; background: var(--ui-bg); min-height: 60vh; }
+.about-title { text-align: center; font-size: 2rem; margin-bottom: 24px; color: var(--ui-text); }
+.about-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; background: var(--ui-surface); padding: 16px; border: 1px solid var(--ui-border); border-radius: 16px; }
+.about-hero-content h2 { font-size: 1.2rem; margin-bottom: 10px; color: var(--ui-text); }
+.about-subtitle { font-size: 1rem; color: var(--ui-primary); margin-bottom: 10px; }
+.about-hero-content p { font-size: 1rem; color: var(--ui-text-muted); margin-bottom: 12px; }
 .about-hero-content p:last-child { margin-bottom: 0; }
 .about-hero-image { display: flex; align-items: center; justify-content: center; }
 .about-hero-image img { width: 100%; max-width: 400px; height: auto; object-fit: contain; border-radius: 8px; }
-.about-experience, .about-history { background: #fff; padding: 16px; margin-bottom: 16px; }
-.about-experience h2, .about-history h2 { text-align: center; font-size: 1.2rem; margin-bottom: 10px; color: #222; }
+.about-experience, .about-history { background: var(--ui-surface); padding: 16px; margin-bottom: 16px; border: 1px solid var(--ui-border); border-radius: 16px; }
+.about-experience h2, .about-history h2 { text-align: center; font-size: 1.2rem; margin-bottom: 10px; color: var(--ui-text); }
 .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
-.experience-item { text-align: center; padding: 8px; background: #f8f9fa; }
-.experience-number { font-size: 1.2rem; color: #ffc107; margin-bottom: 4px; }
-.experience-text { font-size: 1rem; color: #222; }
-.history-content p { font-size: 1rem; color: #555; margin-bottom: 8px; }
+.experience-item { text-align: center; padding: 8px; background: rgba(var(--ui-accent-rgb), 0.08); border: 1px solid rgba(var(--ui-accent-rgb), 0.15); border-radius: 12px; }
+.experience-number { font-size: 1.2rem; color: var(--ui-primary); margin-bottom: 4px; font-weight: 600; }
+.experience-text { font-size: 1rem; color: var(--ui-text); }
+.history-content p { font-size: 1rem; color: var(--ui-text-muted); margin-bottom: 8px; }
 .history-content p:last-child { margin-bottom: 0; }
 
 @media (max-width: 900px) {

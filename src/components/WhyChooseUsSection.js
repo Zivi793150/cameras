@@ -18,6 +18,13 @@ const items = [
     cta: 'Подобрать комплект →'
   },
   {
+    id: 'training',
+    icon: '/icons/checklist.svg',
+    title: 'Обучение и настройка',
+    text: 'Покажем, как управлять системой и смотреть архив за 15 минут.',
+    cta: 'Посмотреть демо →'
+  },
+  {
     id: 'fast',
     icon: '/icons/clock.svg',
     title: 'Монтаж за 24 часа',
@@ -25,11 +32,25 @@ const items = [
     cta: 'Узнать сроки →'
   },
   {
+    id: 'aesthetic',
+    icon: '/icons/check-mark.svg',
+    title: 'Эстетичный монтаж',
+    text: 'Установка без лишних проводов с сохранением вашего интерьера.',
+    cta: 'Смотреть примеры →'
+  },
+  {
     id: 'phone',
     icon: '/icons/telephone.svg',
     title: 'Доступ в смартфоне',
     text: 'Ваш объект под контролем 24/7 из любой точки мира.',
     cta: 'Как это работает →'
+  },
+  {
+    id: 'clarity',
+    icon: '/icons/clock.svg',
+    title: 'Четкость в деталях',
+    text: 'Идеальная видимость лиц и госномеров даже в полной темноте.',
+    cta: 'Смотреть качество →'
   },
   {
     id: 'warranty',
@@ -41,8 +62,8 @@ const items = [
 ];
 
 const WhyChooseUsSection = () => {
-  const left = items.slice(0, 2);
-  const right = items.slice(2);
+  const left = items.slice(0, 4);
+  const right = items.slice(4);
 
   return (
     <section className="why" aria-label="Преимущества">

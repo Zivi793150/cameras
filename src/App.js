@@ -17,6 +17,7 @@ const Contacts = lazy(() => import('./pages/Contacts'));
 const Thanks = lazy(() => import('./pages/Thanks'));
 const Policy = lazy(() => import('./pages/Policy'));
 const Cooperation = lazy(() => import('./pages/Cooperation'));
+const Services = lazy(() => import('./pages/Services'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Lazy loading для оптовых страниц
@@ -52,6 +53,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/cooperation" element={<Cooperation />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/thanks" element={<Thanks />} />
           <Route path="/admin/*" element={<AdminApp />} />
