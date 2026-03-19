@@ -12,12 +12,12 @@
 
 /* Основная шапка */
 .header {
-  background: rgba(0, 0, 0, 0.35);
+  background: var(--ui-bg);
   border-bottom: 1px solid var(--ui-border);
   position: sticky;
   top: 0;
   z-index: 1000;
-  font-family: 'Bounded', Arial, sans-serif;
+  font-family: inherit;
 }
 
 .header-united-bar {
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  font-family: 'Bounded', Arial, sans-serif;
+  font-family: inherit;
   font-weight: 400;
   flex-wrap: nowrap;
   white-space: nowrap;

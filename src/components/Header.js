@@ -64,8 +64,8 @@ const Header = () => {
         <div className="header-logo desktop-logo">
           <div className="logo">
             <picture>
-              <source srcSet="/logo.png" type="image/png" />
-              <img src="/logo.png" alt="Cameras.kz" className="logo-image" />
+              <source srcSet="/logo_pc.jpg" type="image/jpeg" />
+              <img src="/logo_pc.jpg" alt="Cameras.kz" className="logo-image" />
             </picture>
           </div>
         </div>
@@ -73,8 +73,8 @@ const Header = () => {
         {/* Mobile Title */}
         <div className="mobile-title">
           <picture>
-            <source srcSet="/logo.png" type="image/png" />
-            <img src="/logo.png" alt="Cameras.kz" className="mobile-logo-image" />
+            <source srcSet="/logo_mobile.jpg" type="image/jpeg" />
+            <img src="/logo_mobile.jpg" alt="Cameras.kz" className="mobile-logo-image" />
           </picture>
         </div>
         
@@ -123,8 +123,8 @@ const Header = () => {
           <div className="mobile-menu-header">
             <div className="mobile-title">
               <picture>
-                <source srcSet="/cam3.png" type="image/png" />
-                <img src="/cam3.png" alt="Cameras.kz" className="mobile-logo-image" />
+                <source srcSet="/logo_mobile.jpg" type="image/jpeg" />
+                <img src="/logo_mobile.jpg" alt="Cameras.kz" className="mobile-logo-image" />
               </picture>
             </div>
           </div>

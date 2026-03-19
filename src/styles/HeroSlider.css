@@ -3,7 +3,7 @@
   min-width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 28px 0 18px 0;
+  min-height: 520px;
   position: relative;
   overflow: hidden;
 }
@@ -21,6 +21,14 @@
   gap: 24px;
   align-items: center;
   min-height: 420px;
+}
+
+.hero-slider__visual-inner {
+  position: relative;
+  width: min(420px, 100%);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
 }
 
 .hero-slider__glass {
@@ -73,6 +81,7 @@
   color: var(--ui-text);
   font-weight: 600;
 }
+
 
 .hero-slider__actions {
   display: flex;
