@@ -9,9 +9,9 @@ const Header = () => {
   // Фиксированные данные (не тянем из БД, чтобы исключить рассинхрон)
   const siteSettings = {
     contactInfo: {
-      phone: '+7 707 517 73 85',
-      email: 'info@cameras.kz',
-      address: 'Алматы'
+      phone: '+7 700 779 68 38',
+      email: 'safevision@gmail.com',
+      address: 'ул. Розыбакиева 19Б'
     },
     city: 'Алматы'
   };
@@ -64,8 +64,8 @@ const Header = () => {
         <div className="header-logo desktop-logo">
           <div className="logo">
             <picture>
-              <source srcSet="/logo_pc.jpg" type="image/jpeg" />
-              <img src="/logo_pc.jpg" alt="Cameras.kz" className="logo-image" />
+              <source srcSet="/logo_pc.png" type="image/png" />
+              <img src="/logo_pc.png" alt="Cameras.kz" className="logo-image" />
             </picture>
           </div>
         </div>
@@ -73,8 +73,8 @@ const Header = () => {
         {/* Mobile Title */}
         <div className="mobile-title">
           <picture>
-            <source srcSet="/logo_mobile.jpg" type="image/jpeg" />
-            <img src="/logo_mobile.jpg" alt="Cameras.kz" className="mobile-logo-image" />
+            <source srcSet="/logo_mobile.png" type="image/png" />
+            <img src="/logo_mobile.png" alt="Cameras.kz" className="mobile-logo-image" />
           </picture>
         </div>
         
@@ -91,24 +91,62 @@ const Header = () => {
           <Link to="/contacts">Контакты</Link>
         </nav>
 
-        {/* Desktop Contact Info - Call button + Telegram */}
+        {/* Desktop Contact Info */}
         <div className="header-right-blocks desktop-contacts">
-          <a 
-            href={`tel:${siteSettings.contactInfo.phone.replace(/\s/g, '')}`} 
-            className="call-button"
-          >
-            <img src="/icons/telephone.svg" alt="" width={18} height={18} />
-            Позвонить
-          </a>
-          <a 
-            href="https://t.me/cameras_kz" 
-            className="top-bar-social telegram-icon" 
-            title="Telegram" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <FaTelegramPlane size={24} />
-          </a>
+          <div className="header-right-col">
+            <div className="top-bar-address">
+              {siteSettings.contactInfo?.address || 'ул. Розыбакиева 19Б'}
+            </div>
+            <a href={`mailto:${siteSettings.contactInfo.email}`} className="top-bar-email">
+              {siteSettings.contactInfo.email}
+            </a>
+          </div>
+          <div className="header-right-col">
+            <div className="top-bar-socials">
+              <a 
+                href={`https://wa.me/${siteSettings.contactInfo.phone.replace(/\D/g, '')}`} 
+                className="top-bar-social" 
+                title="WhatsApp" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src="/icons/whatsapp-whats-app.svg" alt="WhatsApp" width={24} height={24} style={{display:'block'}} />
+              </a>
+              <a 
+                href="https://www.instagram.com/cameras.kz" 
+                className="top-bar-social" 
+                title="Instagram" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src="/icons/instagram.svg" alt="Instagram" width={24} height={24} style={{display:'block'}} />
+              </a>
+              <a 
+                href="https://www.facebook.com/cameras.kz" 
+                className="top-bar-social" 
+                title="Facebook" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src="/icons/facebook.svg" alt="Facebook" width={24} height={24} style={{display:'block'}} />
+              </a>
+              <a 
+                href="https://t.me/cameras_kz" 
+                className="top-bar-social" 
+                title="Telegram" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaTelegramPlane size={18} />
+              </a>
+            </div>
+            <a 
+              href={`tel:${siteSettings.contactInfo.phone.replace(/\s/g, '')}`} 
+              className="top-bar-phone"
+            >
+              {siteSettings.contactInfo.phone}
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -123,8 +161,8 @@ const Header = () => {
           <div className="mobile-menu-header">
             <div className="mobile-title">
               <picture>
-                <source srcSet="/logo_mobile.jpg" type="image/jpeg" />
-                <img src="/logo_mobile.jpg" alt="Cameras.kz" className="mobile-logo-image" />
+                <source srcSet="/logo_mobile.png" type="image/png" />
+                <img src="/logo_mobile.png" alt="Cameras.kz" className="mobile-logo-image" />
               </picture>
             </div>
           </div>
@@ -143,7 +181,7 @@ const Header = () => {
             <div className="mobile-contact-item">
               <div className="mobile-contact-label">Адрес:</div>
               <div className="mobile-contact-value">
-                {siteSettings.contactInfo?.address || 'Бокейханова 510'}
+                {siteSettings.contactInfo?.address || 'ул. Розыбакиева 19Б'}
               </div>
             </div>
             <div className="mobile-contact-item">
@@ -188,6 +226,15 @@ const Header = () => {
                 rel="noopener noreferrer"
               >
                 <img src="/icons/facebook.svg" alt="Facebook" width={24} height={24} />
+              </a>
+              <a 
+                href="https://t.me/cameras_kz" 
+                className="mobile-social" 
+                title="Telegram" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaTelegramPlane size={24} />
               </a>
             </div>
           </div>

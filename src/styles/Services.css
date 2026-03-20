@@ -8,10 +8,15 @@
 .services-hero {
   text-align: center;
   margin-bottom: 40px;
-  padding: 40px 20px;
-  background: var(--ui-surface);
-  border-radius: 16px;
-  border: 1px solid var(--ui-border);
+}
+
+.services-hero-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .services-title {
@@ -190,7 +195,11 @@
 
 @media (max-width: 900px) {
   .services-hero {
-    padding: 32px 20px;
+    padding: 0 12px;
+  }
+
+  .services-hero-image {
+    border-radius: 16px;
   }
 
   .services-title {

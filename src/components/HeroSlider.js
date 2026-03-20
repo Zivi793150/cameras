@@ -1,14 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/HeroSlider.css';
 
 const slides = [
   {
-    id: 'hero1',
-    image: '/banner_1Hero.jpg'
+    id: 'home',
+    eyebrow: 'Для дома',
+    title: 'Безопасность вашего дома',
+    subtitle: 'Видеонаблюдение, домофоны и сигнализация для квартир и коттеджей',
+    image: '/banner_1Hero.jpg',
+    primaryCta: { label: 'Получить расчет', action: 'lead' },
+    secondaryCta: { label: 'Подробнее', to: '/services' }
   },
   {
-    id: 'hero2',
-    image: '/banner2_hero.jpg'
+    id: 'business',
+    eyebrow: 'Для бизнеса',
+    title: 'Защита вашего бизнеса',
+    subtitle: 'Системы видеонаблюдения и контроля доступа для офисов и магазинов',
+    image: '/banner2_hero.jpg',
+    primaryCta: { label: 'Оставить заявку', action: 'lead' },
+    secondaryCta: { label: 'Контакты', to: '/contacts' }
   }
 ];
 
@@ -25,7 +36,7 @@ const clampIndex = (idx) => {
   return ((idx % n) + n) % n;
 };
 
-const HeroSlider = () => {
+const HeroSlider = ({ onLeadClick }) => {
   const [index, setIndex] = React.useState(0);
   const [isPaused, setIsPaused] = React.useState(false);
   const touchRef = React.useRef({ x: 0, y: 0, active: false });
@@ -86,6 +97,12 @@ const HeroSlider = () => {
   };
 
   const s = slides[index];
+
+  const onPrimary = () => {
+    if (s.primaryCta.action === 'lead') {
+      if (typeof onLeadClick === 'function') onLeadClick();
+    }
+  };
 
   return (
     <section

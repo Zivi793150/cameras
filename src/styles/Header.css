@@ -155,11 +155,13 @@
   justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
-  transition: background 0.2s;
+  border: 2px solid var(--ui-primary);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .top-bar-social:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(var(--ui-primary-rgb), 0.15);
+  transform: scale(1.1);
 }
 
 .top-bar-social img {
@@ -434,11 +436,13 @@
   justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
-  transition: background 0.2s;
+  border: 2px solid var(--ui-primary);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .mobile-social:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(var(--ui-primary-rgb), 0.15);
+  transform: scale(1.1);
 }
 
 /* Медиа-запросы */

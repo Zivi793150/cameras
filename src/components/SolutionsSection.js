@@ -77,10 +77,7 @@ const SolutionsSection = ({ onLeadClick }) => {
               </button>
             </div>
             <div className="solutions__visual" aria-hidden="true">
-              <div className="solutions__card solutions__card--home">
-                <div className="solutions__card-bg" />
-                <img src="/banner1.png" alt="" className="solutions__img" />
-              </div>
+              <img src="/banner_1Hero.jpg" alt="" className="solutions__img" />
             </div>
           </div>
         </div>
@@ -118,10 +115,7 @@ const SolutionsSection = ({ onLeadClick }) => {
               </button>
             </div>
             <div className="solutions__visual" aria-hidden="true">
-              <div className="solutions__card solutions__card--business">
-                <div className="solutions__card-bg" />
-                <img src="/banner2.png" alt="" className="solutions__img" />
-              </div>
+              <img src="/banner2_hero.jpg" alt="" className="solutions__img" />
             </div>
           </div>
         </div>

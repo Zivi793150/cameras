@@ -23,6 +23,54 @@
 .info-item { text-align: center; padding: 8px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--ui-border); }
 .info-item h3 { font-size: 1rem; margin-bottom: 4px; color: var(--ui-text); }
 .info-item p { color: var(--ui-text-muted); font-size: 0.95rem; }
+
+/* Реквизиты */
+.requisites-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--ui-border);
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.requisites-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: var(--ui-text);
+  text-align: center;
+}
+
+.requisites-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.requisites-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.requisites-row:last-child {
+  border-bottom: none;
+}
+
+.requisites-label {
+  color: var(--ui-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.requisites-value {
+  color: var(--ui-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: right;
+  word-break: break-all;
+}
+
 @media (max-width: 900px) {
   .contacts-main {
     padding: 20px 0;

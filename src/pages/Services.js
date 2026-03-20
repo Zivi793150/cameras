@@ -93,10 +93,11 @@ const Services = () => {
       <main className="services-main">
         <div className="container">
           <section className="services-hero">
-            <h1 className="services-title">Наши Услуги</h1>
-            <p className="services-intro">
-              Мы обеспечиваем полный цикл внедрения слаботочных систем: от разработки концепции до регулярного сервисного сопровождения.
-            </p>
+            <img 
+              src="/услуги.png" 
+              alt="Наши услуги — Видеонаблюдение и системы безопасности" 
+              className="services-hero-image"
+            />
           </section>
 
           <section className="services-list">
