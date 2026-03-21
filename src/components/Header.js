@@ -92,60 +92,50 @@ const Header = () => {
 
         {/* Desktop Contact Info */}
         <div className="header-right-blocks desktop-contacts">
-          <div className="header-right-col">
-            <div className="top-bar-address">
-              {siteSettings.contactInfo?.address || 'ул. Розыбакиева 19Б'}
-            </div>
-            <a href={`mailto:${siteSettings.contactInfo.email}`} className="top-bar-email">
-              {siteSettings.contactInfo.email}
-            </a>
-          </div>
-          <div className="header-right-col">
-            <div className="top-bar-socials">
-              <a 
-                href={`https://wa.me/${siteSettings.contactInfo.phone.replace(/\D/g, '')}`} 
-                className="top-bar-social" 
-                title="WhatsApp" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <img src="/icons/whatsapp-whats-app.svg" alt="WhatsApp" width={24} height={24} style={{display:'block'}} />
-              </a>
-              <a 
-                href="https://www.instagram.com/cameras.kz" 
-                className="top-bar-social" 
-                title="Instagram" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <img src="/icons/instagram.svg" alt="Instagram" width={24} height={24} style={{display:'block'}} />
-              </a>
-              <a 
-                href="https://www.facebook.com/cameras.kz" 
-                className="top-bar-social" 
-                title="Facebook" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <img src="/icons/facebook.svg" alt="Facebook" width={24} height={24} style={{display:'block'}} />
-              </a>
-              <a 
-                href="https://www.tiktok.com/@cameras_kz" 
-                className="top-bar-social" 
-                title="TikTok" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <img src="/icons/tictok.svg" alt="TikTok" width={18} height={18} style={{display:'block'}} />
-              </a>
-            </div>
+          <div className="top-bar-socials">
             <a 
-              href={`tel:${siteSettings.contactInfo.phone.replace(/\s/g, '')}`} 
-              className="top-bar-phone"
+              href="https://www.instagram.com/cameras.kz" 
+              className="top-bar-social" 
+              title="Instagram" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              {siteSettings.contactInfo.phone}
+              <img src="/icons/instagram.svg" alt="Instagram" width={20} height={20} />
+            </a>
+            <a 
+              href={`https://wa.me/${siteSettings.contactInfo.phone.replace(/\D/g, '')}`} 
+              className="top-bar-social" 
+              title="WhatsApp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img src="/icons/whatsapp-whats-app.svg" alt="WhatsApp" width={20} height={20} />
+            </a>
+            <a 
+              href="https://www.tiktok.com/@cameras_kz" 
+              className="top-bar-social" 
+              title="TikTok" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img src="/icons/tictok.svg" alt="TikTok" width={20} height={20} />
+            </a>
+            <a 
+              href="https://www.facebook.com/cameras.kz" 
+              className="top-bar-social" 
+              title="Facebook" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img src="/icons/facebook.svg" alt="Facebook" width={20} height={20} />
             </a>
           </div>
+          <a 
+            href={`tel:${siteSettings.contactInfo.phone.replace(/\s/g, '')}`} 
+            className="top-bar-phone"
+          >
+            {siteSettings.contactInfo.phone}
+          </a>
         </div>
 
         {/* Mobile Menu Button */}

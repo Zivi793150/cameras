@@ -220,7 +220,7 @@ app.post('/api/send-telegram', async (req, res) => {
       }
     } else {
       // Обычная заявка (из модалки)
-      text = `\nНовая заявка с сайта!\n\n<b>Имя:</b> ${safeName}\n<b>Телефон:</b> ${safePhone}\n<b>Сообщение:</b> ${safeMessage || 'Не указано'}\n${safeProduct ? `<b>Товар:</b> ${safeProduct}` : ''}\n<b>Время:</b> ${new Date().toLocaleString('ru-RU')}`;
+      text = `\nНовая заявка с сайта!\n\n<b>Имя</b> ${safeName}\n<b>Телефон</b> ${safePhone}\n<b>Сообщение</b> ${safeMessage || 'Не указано'}\n${safeProduct ? `<b>Товар</b> ${safeProduct}` : ''}\n<b>Время</b> ${new Date().toLocaleString('ru-RU')}`;
     }
 
     // Если токен или chatId не настроены, не падаем 500 — логируем и отвечаем success=true,
