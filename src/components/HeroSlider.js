@@ -1,25 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/HeroSlider.css';
 
 const slides = [
   {
     id: 'home',
-    eyebrow: 'Для дома',
-    title: 'Безопасность вашего дома',
-    subtitle: 'Видеонаблюдение, домофоны и сигнализация для квартир и коттеджей',
-    image: '/banner_1Hero.jpg',
-    primaryCta: { label: 'Получить расчет', action: 'lead' },
-    secondaryCta: { label: 'Подробнее', to: '/services' }
+    image: '/banner.png'
   },
   {
     id: 'business',
-    eyebrow: 'Для бизнеса',
-    title: 'Защита вашего бизнеса',
-    subtitle: 'Системы видеонаблюдения и контроля доступа для офисов и магазинов',
-    image: '/banner2_hero.jpg',
-    primaryCta: { label: 'Оставить заявку', action: 'lead' },
-    secondaryCta: { label: 'Контакты', to: '/contacts' }
+    image: '/banner.png'
   }
 ];
 
@@ -107,35 +96,10 @@ const HeroSlider = ({ onLeadClick }) => {
   return (
     <section
       className="hero-slider"
-      style={{ backgroundImage: `url(${s.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       role="region"
-      aria-roledescription="carousel"
       aria-label="Главный баннер"
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
     >
-      <div className="hero-slider__container">
-        <div className="hero-slider__dots" role="tablist" aria-label="Переключение слайдов">
-          {slides.map((sl, i) => (
-            <button
-              key={sl.id}
-              type="button"
-              className={`hero-slider__dot ${i === index ? 'is-active' : ''}`}
-              aria-label={`Слайд ${i + 1}`}
-              aria-selected={i === index}
-              role="tab"
-              onClick={() => goTo(i)}
-            />
-          ))}
-        </div>
-      </div>
+      <img src={s.image} alt="" className="hero-slider__image" />
     </section>
   );
 };
