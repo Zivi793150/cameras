@@ -16,7 +16,7 @@ const Contacts = () => {
       WhatsApp: `https://wa.me/${'77007796838'.replace(/\s/g, '')}`,
       Instagram: 'https://www.instagram.com/cameras.kz',
       Facebook: 'https://www.facebook.com/cameras.kz',
-      Telegram: 'https://t.me/cameras_kz'
+      TikTok: 'https://www.tiktok.com/@cameras_kz'
     };
     const url = urls[platform];
     if (url) {
@@ -88,7 +88,7 @@ const Contacts = () => {
                   <button className="social-link" onClick={() => handleSocialClick('WhatsApp')}><span className="social-icon"><img src="/icons/whatsapp-whats-app.svg" alt="WhatsApp" width={24} height={24} loading="lazy" /></span><span>WhatsApp</span></button>
                   <button className="social-link" onClick={() => handleSocialClick('Instagram')}><span className="social-icon"><img src="/icons/instagram.svg" alt="Instagram" width={24} height={24} loading="lazy" /></span><span>Instagram</span></button>
                   <button className="social-link" onClick={() => handleSocialClick('Facebook')}><span className="social-icon"><img src="/icons/facebook.svg" alt="Facebook" width={24} height={24} loading="lazy" /></span><span>Facebook</span></button>
-                  <button className="social-link" onClick={() => handleSocialClick('Telegram')}><span className="social-icon"><img src="/icons/telegram.svg" alt="Telegram" width={24} height={24} loading="lazy" /></span><span>Telegram</span></button>
+                  <button className="social-link" onClick={() => handleSocialClick('TikTok')}><span className="social-icon"><img src="/icons/tictok.svg" alt="TikTok" width={24} height={24} loading="lazy" /></span><span>TikTok</span></button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaTelegramPlane } from 'react-icons/fa';
 import '../styles/Header.css';
 
 const Header = () => {
@@ -131,13 +130,13 @@ const Header = () => {
                 <img src="/icons/facebook.svg" alt="Facebook" width={24} height={24} style={{display:'block'}} />
               </a>
               <a 
-                href="https://t.me/cameras_kz" 
+                href="https://www.tiktok.com/@cameras_kz" 
                 className="top-bar-social" 
-                title="Telegram" 
+                title="TikTok" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaTelegramPlane size={18} />
+                <img src="/icons/tictok.svg" alt="TikTok" width={18} height={18} style={{display:'block'}} />
               </a>
             </div>
             <a 
@@ -228,13 +227,13 @@ const Header = () => {
                 <img src="/icons/facebook.svg" alt="Facebook" width={24} height={24} />
               </a>
               <a 
-                href="https://t.me/cameras_kz" 
+                href="https://www.tiktok.com/@cameras_kz" 
                 className="mobile-social" 
-                title="Telegram" 
+                title="TikTok" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaTelegramPlane size={24} />
+                <img src="/icons/tictok.svg" alt="TikTok" width={24} height={24} />
               </a>
             </div>
           </div>

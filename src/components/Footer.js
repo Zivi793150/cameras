@@ -7,23 +7,24 @@ const Footer = () => {
   const [siteSettings, setSiteSettings] = useState({
     city: 'Алматы',
     contactInfo: {
-      phone: '+7 707 517 73 85',
-      email: 'info@cameras.kz',
-      address: 'Алматы'
+      phone: '+7 700 779 68 38',
+      email: 'safevision@gmail.com',
+      address: 'ул. Розыбакиева 19Б, Алматы'
     },
-    workingHours: 'Пн-Пт: 9:00-18:00',
+    workingHours: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
     deliveryInfo: {
       freeDelivery: 'Доставка по Алматы',
-      pickupAddress: 'Алматы',
+      pickupAddress: 'ул. Розыбакиева 19Б',
       deliveryNote: 'Срок доставки рассчитывается менеджером после оформления заказа'
     },
     paymentMethods: 'Kaspi, Visa, наличные',
     companyInfo: {
-      name: 'A-Market',
-      bin: '940727401776',
-      iik: 'KZ04722S000042260245',
+      name: 'ТОО «SafeVision»',
+      bin: '051223501917',
+      iik: 'KZ17722S000051523705',
       kbe: '19',
-      bank: ''
+      bank: 'АО «Kaspi Bank»',
+      bik: 'CASPKZKA'
     }
   });
 
@@ -54,11 +55,12 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Реквизиты</h4>
           <ul>
-            <li>{siteSettings.companyInfo.name}</li>
+            <li><strong>{siteSettings.companyInfo.name}</strong></li>
             <li>БИН: {siteSettings.companyInfo.bin}</li>
-            <li>Юр. адрес: {siteSettings.city || 'Алматы'}</li>
-            <li>КБЕ: {siteSettings.companyInfo.kbe}, ИИК: {siteSettings.companyInfo.iik}</li>
-            {siteSettings.companyInfo.bank ? <li>{siteSettings.companyInfo.bank}</li> : null}
+            <li>Адрес: {siteSettings.contactInfo?.address || 'ул. Розыбакиева 19Б, Алматы'}</li>
+            <li>ИИК: {siteSettings.companyInfo.iik}</li>
+            <li>Банк: {siteSettings.companyInfo.bank}</li>
+            <li>БИК: {siteSettings.companyInfo.bik}</li>
           </ul>
         </div>
         
