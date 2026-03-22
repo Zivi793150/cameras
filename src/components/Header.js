@@ -62,10 +62,6 @@ const Header = () => {
         {/* Desktop Logo */}
         <div className="header-logo desktop-logo">
           <div className="logo">
-            <div className="logo-frame-tl"></div>
-            <div className="logo-frame-br"></div>
-            <div className="logo-noise"></div>
-            <div className="logo-rec">REC</div>
             <picture>
               <source srcSet="/logo_pc.png" type="image/png" />
               <img src="/logo_pc.png" alt="Cameras.kz" className="logo-image" />
@@ -75,9 +71,6 @@ const Header = () => {
         
         {/* Mobile Title */}
         <div className="mobile-title">
-          <div className="mobile-frame-tl"></div>
-          <div className="mobile-frame-br"></div>
-          <div className="mobile-rec">REC</div>
           <picture>
             <source srcSet="/logo_mobile.png" type="image/png" />
             <img src="/logo_mobile.png" alt="Cameras.kz" className="mobile-logo-image" />
