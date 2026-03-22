@@ -4,21 +4,10 @@
   margin-left: 50%;
   transform: translateX(-50%);
   background: var(--ui-bg);
-  padding-top: 20px;
-}
-
-.solutions::before {
-  content: '';
-  display: block;
-  max-width: 1200px;
-  margin: 0 auto 20px auto;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--ui-primary), transparent);
-  opacity: 0.5;
 }
 
 .solutions__block {
-  padding: 40px 0;
+  padding: 60px 0;
   position: relative;
 }
 

@@ -6,7 +6,7 @@ const items = [
   {
     id: 'free',
     icon: '/icons/gui-price-tag.svg',
-    title: 'Выезд и смета — 0 ₸',
+    title: 'Выезд и смета 0 ₸',
     text: 'Замер и расчет в день обращения',
     cta: 'Смотреть примеры →'
   },
@@ -69,7 +69,6 @@ const WhyChooseUsSection = () => {
     <section className="why" aria-label="Преимущества">
       <div className="why__container">
         <div className="why__head">
-          <div className="why__eyebrow">ПОЧЕМУ МЫ</div>
           <h2 className="why__title">Преимущества установки видеонаблюдения</h2>
           <div className="why__divider" />
           <p className="why__subtitle">

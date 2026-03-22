@@ -1,5 +1,33 @@
 /* --- Оптимизированные стили для главного блока --- */
 .home { background: var(--ui-bg); min-height: 100vh; }
+
+/* Section Divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.section-divider__line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--ui-primary) 100%);
+}
+
+.section-divider__line:last-child {
+  background: linear-gradient(90deg, var(--ui-primary) 0%, transparent 100%);
+}
+
+.section-divider__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ui-primary);
+  box-shadow: 0 0 12px rgba(var(--ui-primary-rgb), 0.5);
+}
+
 .main-maket-section { background: var(--ui-bg); padding: 24px 0; width: 100vw; min-width: 100vw; margin-left: 50%; transform: translateX(-50%); }
 .main-maket-container { display: flex; justify-content: center; align-items: flex-start; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 .main-maket-left { flex: 1 1 50%; display: flex; align-items: flex-end; }

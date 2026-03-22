@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ui-bg);
+  background: #0a0a0f;
 }
 
 .hero-slider__image {

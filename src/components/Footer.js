@@ -11,7 +11,7 @@ const Footer = () => {
       email: 'safevision@gmail.com',
       address: 'ул. Розыбакиева 19Б, Алматы'
     },
-    workingHours: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
+    workingHours: 'Пн-Пт 9.00-18.00, Сб 10.00-16.00',
     deliveryInfo: {
       freeDelivery: 'Доставка по Алматы',
       pickupAddress: 'ул. Розыбакиева 19Б',
@@ -112,7 +112,7 @@ const Footer = () => {
             </li>
             <li>
               <img src="/icons/box.svg" alt="Самовывоз" width={16} height={16} style={{display:'inline-block', marginRight:'8px', verticalAlign:'middle'}} />
-              Самовывоз: {siteSettings.deliveryInfo?.pickupAddress || 'Алматы, Казахстан'}
+              Самовывоз {siteSettings.deliveryInfo?.pickupAddress || 'Алматы, Казахстан'}
             </li>
             <li>
               <img src="/icons/card.svg" alt="Оплата" width={16} height={16} style={{display:'inline-block', marginRight:'8px', verticalAlign:'middle'}} />

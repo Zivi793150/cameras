@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Modal from '../components/Modal';
+import AboutCompanySection from '../components/AboutCompanySection';
+// SimpleSlider временно отключён по требованию: возвращаем статичное изображение
 import { fetchWithCache } from '../utils/cache';
 import '../styles/Home.css';
 import Seo from '../components/Seo';
 import HeroSlider from '../components/HeroSlider';
+import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import SolutionsSection from '../components/SolutionsSection';
 import PlansSection from '../components/PlansSection';
 
@@ -253,6 +256,12 @@ const Home = () => {
       />
       <Header />
       <HeroSlider onLeadClick={handleOpenModal} />
+      <div className="section-divider">
+        <div className="section-divider__line"></div>
+        <div className="section-divider__dot"></div>
+        <div className="section-divider__line"></div>
+      </div>
+      <WhyChooseUsSection />
       <SolutionsSection onLeadClick={handleOpenModal} />
       <PlansSection onLeadClick={handleOpenModal} />
       <section className="mini-catalog-section">

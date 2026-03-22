@@ -43,20 +43,242 @@
   align-items: center;
   gap: 8px;
   overflow: visible;
+  position: relative;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.85) 0%, rgba(51, 65, 85, 0.9) 100%);
+  border-radius: 10px;
+  box-shadow: 
+    0 0 0 1px rgba(249, 115, 22, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Vignette effect */
+.logo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Scan lines effect for CCTV look with animation */
+.logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.04) 2px,
+      rgba(0, 0, 0, 0.04) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50%,
+      rgba(255, 255, 255, 0.01) 50%
+    );
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 1;
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 100px, 0 0; }
+}
+
+/* Noise/grain overlay */
+.logo-noise {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* REC indicator */
+.logo-rec {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  font-weight: 700;
+  color: #ef4444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 6;
+  animation: rec-blink 1.5s ease-in-out infinite;
+}
+
+.logo-rec::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: rec-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes rec-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes rec-dot {
+  0%, 100% { 
+    opacity: 1;
+    box-shadow: 0 0 4px #ef4444;
+  }
+  50% { 
+    opacity: 0.6;
+    box-shadow: 0 0 8px #ef4444;
+  }
+}
+
+/* CCTV camera frame corners */
+.logo-frame-tl {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid var(--ui-primary);
+  border-left: 2px solid var(--ui-primary);
+  border-radius: 4px 0 0 0;
+  z-index: 2;
+}
+
+.logo-frame-br {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 18px;
+  height: 18px;
+  border-bottom: 2px solid var(--ui-primary);
+  border-right: 2px solid var(--ui-primary);
+  border-radius: 0 0 4px 0;
+  z-index: 2;
 }
 
 .logo-image {
-  height: 84px;
+  height: 70px;
   width: auto;
   object-fit: contain;
-  margin: 0; /* убрали отрицательные отступы для корректной оптики */
+  margin: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  position: relative;
+  z-index: 3;
 }
 
 .mobile-logo-image {
-  height: 80px;
+  height: 65px;
   width: auto;
   object-fit: contain;
-  margin: 0; /* оптика на мобильных */
+  margin: 0;
+  position: relative;
+  z-index: 3;
+}
+
+/* Mobile title container with CCTV frame */
+.mobile-title {
+  position: relative;
+  padding: 5px 10px;
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.85) 0%, rgba(51, 65, 85, 0.9) 100%);
+  border-radius: 8px;
+  box-shadow: 
+    0 0 0 1px rgba(249, 115, 22, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Vignette for mobile */
+.mobile-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Scan lines for mobile with animation */
+.mobile-title::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+  animation: scanline 8s linear infinite;
+}
+
+.mobile-frame-tl {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--ui-primary);
+  border-left: 2px solid var(--ui-primary);
+  border-radius: 3px 0 0 0;
+  z-index: 2;
+}
+
+.mobile-frame-br {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--ui-primary);
+  border-right: 2px solid var(--ui-primary);
+  border-radius: 0 0 3px 0;
+  z-index: 2;
+}
+
+/* Mobile REC indicator */
+.mobile-rec {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 6px;
+  font-weight: 700;
+  color: #ef4444;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  z-index: 6;
+  animation: rec-blink 1.5s ease-in-out infinite;
+}
+
+.mobile-rec::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: rec-dot 1.5s ease-in-out infinite;
 }
 
 /* Десктопная навигация */
@@ -143,39 +365,39 @@
 
 .top-bar-socials {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  gap: var(--space-xs);
+  margin-bottom: 0; /* убрали лишний нижний отступ для ровной оптики */
 }
 
 .top-bar-social {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
-  border: none;
-  transition: all 0.2s ease;
+  color: #9CA3AF;
+  transition: all 0.25s ease;
 }
 
 .top-bar-social:hover {
   background: var(--ui-primary);
-  transform: scale(1.1);
-  box-shadow: 0 4px 16px rgba(var(--ui-primary-rgb), 0.5);
+  color: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 0 16px rgba(var(--ui-primary-rgb), 0.5);
 }
 
 .top-bar-social img {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: block;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.2s ease;
+  opacity: 0.6;
+  transition: all 0.25s ease;
 }
 
 .top-bar-social:hover img {
-  filter: grayscale(0%) opacity(1);
-  filter: brightness(10);
+  opacity: 1;
 }
 
 /* Кнопка "Позвонить" */
@@ -437,20 +659,34 @@
 }
 
 .mobile-social {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 2px solid var(--ui-primary);
-  transition: background 0.2s, transform 0.2s;
+  background: rgba(255, 255, 255, 0.08);
+  color: #9CA3AF;
+  transition: all 0.25s ease;
 }
 
 .mobile-social:hover {
-  background: rgba(var(--ui-primary-rgb), 0.15);
-  transform: scale(1.1);
+  background: var(--ui-primary);
+  color: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 0 16px rgba(var(--ui-primary-rgb), 0.5);
+}
+
+.mobile-social img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  opacity: 0.6;
+  transition: all 0.25s ease;
+}
+
+.mobile-social:hover img {
+  opacity: 1;
 }
 
 /* Медиа-запросы */

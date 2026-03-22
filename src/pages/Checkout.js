@@ -234,15 +234,15 @@ const Checkout = () => {
         // Формат сообщения строго по желанию заказчика
         const addressLine = deliveryType === 'delivery' ? (form.address || '') : 'Бокейханова 510, Склад, Алматы';
         const telegramMessage =
-      `<b>Имя</b> ${form.firstName || ''}\n` +
-      `<b>Телефон</b> ${form.phone || ''}\n` +
-      `<b>Сообщение</b> Заказ через форму\n` +
-      `<b>Товар</b> ${product?.name || ''} × ${quantity} шт.\n` +
-      `<b>Доставка</b> ${deliveryText}\n` +
-      `<b>Адрес доставки</b> ${addressLine}\n` +
-      `<b>Оплата</b> ${paymentText}\n` +
-      `<b>Сумма</b> ${Number(finalTotal).toFixed(0)} ₸\n` +
-      `<b>Коментарий</b> ${form.comment || ''}\n\n`;
+      `<b>Имя:</b> ${form.firstName || ''}\n` +
+      `<b>Телефон:</b> ${form.phone || ''}\n` +
+      `<b>Сообщение:</b> Заказ через форму\n` +
+      `<b>Товар:</b> ${product?.name || ''} × ${quantity} шт.\n` +
+      `<b>Доставка:</b> ${deliveryText}\n` +
+      `<b>Адрес доставки:</b> ${addressLine}\n` +
+      `<b>Оплата:</b> ${paymentText}\n` +
+      `<b>Сумма:</b> ${Number(finalTotal).toFixed(0)} ₸\n` +
+      `<b>Коментарий:</b> ${form.comment || ''}\n\n`;
 
         await fetch('/api/send-telegram', {
           method: 'POST',

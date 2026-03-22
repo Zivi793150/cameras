@@ -75,7 +75,7 @@ const Contacts = () => {
               </div>
               <div className="contact-card">
                 <div className="contact-card-header"><span className="contact-card-icon"><img src="/icons/clock.svg" alt="Часы" width={24} height={24} loading="lazy" /></span><span>Режим работы</span></div>
-                <div className="contact-card-content">Пн-Пт: 9:00 - 18:00<br />Сб: 10:00 - 16:00</div>
+                <div className="contact-card-content">Пн-Пт 9.00 18.00<br />Сб 10.00 16.00</div>
               </div>
             </div>
             <div className="contact-form">
