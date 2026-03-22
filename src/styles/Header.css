@@ -20,17 +20,19 @@
   top: 0;
   z-index: 1000;
   font-family: inherit;
+  overflow: hidden;
 }
 
 .header-united-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 18px;
-  padding: 0 20px 0 12px;
-  min-height: 72px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px;
+  min-height: 64px;
   background: transparent;
   position: relative;
+  max-width: 100%;
 }
 
 /* Десктопный логотип */
@@ -48,17 +50,17 @@
 }
 
 .logo-image {
-  height: 84px;
+  height: 64px;
   width: auto;
   object-fit: contain;
-  margin: 0; /* убрали отрицательные отступы для корректной оптики */
+  margin: 0;
 }
 
 .mobile-logo-image {
-  height: 80px;
+  height: 56px;
   width: auto;
   object-fit: contain;
-  margin: 0; /* оптика на мобильных */
+  margin: 0;
 }
 
 /* Десктопная навигация */
@@ -70,7 +72,8 @@
   font-weight: 400;
   flex-wrap: nowrap;
   white-space: nowrap;
-  padding: 0 0 0 220px;
+  flex: 1;
+  margin-left: 170px;
 }
 
 .desktop-nav a {
@@ -96,9 +99,9 @@
 /* Десктопные контакты */
 .desktop-contacts {
   display: flex;
-  align-items: center; /* выравнивание по оптической строке */
-  gap: var(--space-lg);
-  margin-left: auto;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
 }
 
 .header-right-col {

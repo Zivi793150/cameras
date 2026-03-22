@@ -1,8 +1,5 @@
 .plans {
-  width: 100vw;
-  min-width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   padding: 44px 0;
   background: var(--ui-bg);
   position: relative;

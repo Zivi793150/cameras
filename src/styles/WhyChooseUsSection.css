@@ -1,9 +1,6 @@
 .why {
   position: relative;
-  width: 100vw;
-  min-width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   padding: 40px 0;
   overflow: hidden;
   background: var(--ui-bg);

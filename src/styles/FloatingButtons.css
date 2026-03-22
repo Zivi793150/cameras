@@ -9,7 +9,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: stretch;
-  width: 100vw; /* гарантируем, что не вылезают за края */
+  width: 100%;
   height: 60px;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
